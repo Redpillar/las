@@ -411,7 +411,7 @@ table caption,
 .check-box-wrap.small .icon > .f{left:0.1rem; height:1.5rem;}
 .check-box-wrap.small.checked .icon > .f{width:1.5rem;}
 .check-box-wrap.small .icon > .f i{font-size:1.5rem;}
-.check-box-wrap.small .check-box-label{margin-top:0.2rem; font-size:1.4rem; height:1.5rem;}
+.check-box-wrap.small .check-box-label{margin-top:0.2rem; padding-left:0.5rem; font-size:1.4rem; height:1.5rem;}
 
 
 /* button */
@@ -449,6 +449,7 @@ table caption,
 .field.on .label-switching .tit{top:-2rem;}
 .field.on .label-switching.only .tit{top:0;}
 .field.on .label-switching .explain{top:0rem;}
+.field.on .label-switching.only .explain{top:2rem;}
 
 .label-switching.l2{z-index:2; overflow:visible;}
 .label-switching .innerWrap{position:relative; height:2rem; overflow:hidden; transition:height ease 0.5s;}

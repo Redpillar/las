@@ -492,6 +492,15 @@ table caption,
 /* btn-set */
 .check-box-wrap + .btn-set{margin-top:2rem;}
 
+/* set-list */
+.bothSet01 .set-list{margin:3rem 0 2rem;}
+.bothSet01 .sns-list{margin:2rem 0 0rem;}
+
+/* top-info-set */
+.top-info-set .top-icon{text-align:center;}
+.top-info-set .top-icon span{display:inline-block; width:5rem; height:5rem; border-radius:1rem; border:0.1rem solid #be417b; background:linear-gradient(135deg, #98222c, #be417b);}
+.top-info-set h1{margin:1rem 0 0; font-size:2rem; font-weight:bold; text-align:center;}
+
 /* 저해상도 대응 */
 
 /* width 320 대응 */

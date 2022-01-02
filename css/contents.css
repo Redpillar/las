@@ -179,3 +179,14 @@
 /* .intro-txt-area01 .txt-type02 {font-size:2.4rem; text-align:center;}
 .intro-txt-area01 .txt-type02 > span {display:block; font-weight:700; line-height:4.4rem;}
 .intro-txt-area01 .txt-type02 > span > span {font-weight:normal} */
+
+
+/* 계정 세팅 */
+.set-list ul > li {margin-top: .7rem; }
+.set-list ul > li > a {font-size: 1.3rem; color:#2c3030; width: 100%; display: flex; justify-content: space-between; align-items: center;}
+.set-list ul > li > a > i { color: #98222c;}
+
+
+
+footer {padding:2rem}
+footer .terms {display: flex; justify-content: space-between;}

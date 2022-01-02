@@ -207,6 +207,7 @@ table caption,
 
 #container {width:100%;/* height:100%; */background:#fff;box-sizing:border-box;}
 #contents {width:100%;/* height:100%; */padding: 7rem 2rem 0 2rem;box-sizing:border-box;}
+#contents.t2 {padding-top:5rem;}
 
 /* Text */
 .top-txt-area01 {margin-top:4rem}
@@ -510,7 +511,9 @@ table caption,
 .text-info-box{margin:4rem 0 0 0; font-size:1.4rem; color:#111;}
 
 /* shpping */
-.shopping-box h1{padding:2rem 0 1.5rem; font-size:1.6rem; color:#000; text-align:center;}
+.shopping-box{position:relative;}
+.shopping-box:before{content:""; position:absolute; top:0; left:-2rem; right:-2rem; height:0.7rem; background:#e7e6e6;}
+.shopping-box h1{margin:2rem 0 0 0; padding:3rem 0 1.5rem; font-size:1.6rem; color:#000; text-align:center;}
 .shopping-box .list-box{width:calc(100% - 1rem); margin:0 auto; padding:1rem; border:1px solid #ededed; box-shadow:0.2rem 0.2rem 0.4rem rgba(0,0,0,0.2)}
 .shopping-box .list-box .head{display:flex; justify-content:space-between; padding:0 0 0.5rem 0; border-bottom:1px solid #ededed}
 .shopping-box .list-box .head a{font-size:1.4rem; font-weight:bold;}

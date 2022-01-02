@@ -121,8 +121,8 @@ input[type='text']::placeholder{font-size:1.5rem; color:#bdbdbd}
 .clause-list-box > ul > li + li{margin-top:3rem;}
 .both-layout-box{/* padding:0 0 0 4.5rem; */}
 .both-layout-box .alink-line{margin-bottom:0.8rem;}
-.area-clause{height:8rem;padding:1.1rem 1.5rem;border:0.1rem solid #f2f2f2;overflow-y: scroll;background:#f9f9f9;}
-.area-clause .innerWrap{overflow-y: auto;height:100%;display:-webkit-box;-webkit-line-clamp:6;-webkit-box-orient:vertical;text-overflow:ellipsis;}
+.area-clause{height:8rem;border:0.1rem solid #f2f2f2;overflow-y: scroll;background:#f9f9f9;}
+.area-clause .innerWrap{overflow-y: auto;height:calc(100% - 2.2rem); padding:1.1rem 1.5rem}
 .area-clause h1, .area-clause h2, .area-clause p{display:block; width:100%; height:auto; padding:0; margin:0;}
 .area-clause h1{padding:0 0 1.5rem 0; font-size:1.4rem; font-weight:bold;}
 .area-clause h2{padding:0 0 1rem 0;font-size: 1.4rem;font-weight:normal;}

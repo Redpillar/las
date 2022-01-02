@@ -4,6 +4,7 @@
 @import url(contents.css); /* 작업 후 정리 */
 @import url(contents02.css); /* 작업 후 정리 */
 @import url(importFont.css); /* 폰트 */
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css); /* 웹폰트 아콘 */
 
 html {-webkit-font-smoothing: antialiased;}
 html,body {font-size:62.5%; min-height: 100%; height: 100%;} 
@@ -182,7 +183,11 @@ table caption,
 
 
 /* Layout */
-#header {position:fixed; top:0; left:0; width:100%; height:44px; text-align:center; line-height:44px; z-index:2; background:#000; color:#fff}
+#header {position:fixed; top:0; left:0; width:100%; height:44px; text-align:center; line-height:44px; z-index:100; color:#fff; background:linear-gradient(135deg, #98222c, #be417b);}
+
+#header > .arr{position:absolute; top:0; left:0; display:flex; align-items:center; justify-content:center; width:30px; height:100%;}
+#header > .arr i{font-size:3.5rem;}
+#header > h1{font-size:2rem; font-weight:bold;}
 
 #header .navigator {position: relative; background-color:#fff}
 #header .navigator button {position:absolute; top:0; width:4.4rem; height:4.4rem;}
@@ -381,7 +386,78 @@ table caption,
 .popup-area .pop-btnwrap.t02 .btn-pop {display:inline-block; width:50%; border-left:1px solid #ddd;}
 
 
+/* 체크박스 */
+.check-box-wrap{position:relative; display:inline-block; width:100%; font-size:0;}
+.check-box-wrap .icon{position:relative; display:inline-block;}
+.check-box-wrap .icon i{font-size:4rem; color:#bfbfbf; transition: color ease 0.5s;}
+.check-box-wrap .icon > .f i{font-size:3.8rem; transition: color ease 0.5s;}
+.check-box-wrap .icon > .f{position:absolute; top:50%; left:0.2rem; z-index:2; width:0; height:3rem; overflow:hidden; transition:width ease 0.25s; transform:translateY(-50%)}
+.check-box-wrap .icon > .f i{font-size:3.0rem;}
+.check-box-wrap.checked .icon > .f{width:3rem;}
+.check-box-wrap.checked .icon i{color:#98222e;}
+.check-box-wrap .check-box-label{display:inline-flex; align-items:center; width:calc(100% - 40px); height:4rem; padding:0.3rem 0 0 1rem; font-size:2rem; color:#000; vertical-align:top; box-sizing:border-box;}
 
+.check-box-wrap.fill .icon{transition:none;}
+.check-box-wrap.fill .fill{position:absolute; top:0; left:0; width:4rem; height:100%; overflow:hidden; opacity:0; transition:opacity ease 0.3s;}
+.check-box-wrap.fill .fill i{color:#98222e;}
+.check-box-wrap.fill .f i{color:#fff; opacity:0; transition:none;}
+.check-box-wrap.fill.checked .b{color:#bfbfbf;}
+.check-box-wrap.fill.checked .fill{opacity:1;}
+.check-box-wrap.fill.checked .f i{animation:fillCheck 0.3s ease 0.1s forwards alternate;}
+
+/* small */
+.check-box-wrap.small .icon{height:2rem;}
+.check-box-wrap.small .icon i{font-size:2rem;}
+.check-box-wrap.small .icon > .f{left:0.1rem; height:1.5rem;}
+.check-box-wrap.small.checked .icon > .f{width:1.5rem;}
+.check-box-wrap.small .icon > .f i{font-size:1.5rem;}
+.check-box-wrap.small .check-box-label{margin-top:0.2rem; font-size:1.4rem; height:1.5rem;}
+
+
+/* button */
+.button-basic{display:inline-block; padding:0.8rem 3rem 0.4rem 3rem; font-size:2rem; font-weight:bold; color:#000; border-radius:3rem; border-radius:3rem; background:#d9d9d9;}
+.button-basic[disabled]{color:#fff;}
+.button-basic.on{color:#fff; background:linear-gradient(135deg, #98222c, #be417b);}
+.button-basic.outline{ padding:0.4rem 2.8rem; color:#971d37; border:2px solid #971d37; background:transparent;}
+
+@keyframes fillCheck{
+    from{
+        opacity:0;
+        transform:scale(0.25);
+    }
+    85%{
+        opacity:0.8;
+        transform:scale(1.2);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+/* label switching */
+.label-switching{position:relative; height:2rem; overflow:hidden;}
+.label-switching .tit{position:absolute; top:0; left:0; width:100%; height:2rem; font-size:2rem; font-weight:bold; transition:top ease 0.5s;}
+.label-switching .explain{position:absolute; top:2rem; left:0; width:100%; height:2rem; font-size:1.6rem; transition:top ease 0.5s;}
+
+.field.on .label-switching .tit{top:-2rem;}
+.field.on .label-switching .explain{top:0rem;}
+
+.label-switching.l2{z-index:2; overflow:visible;}
+.label-switching .innerWrap{position:relative; height:2rem; overflow:hidden; transition:height ease 0.5s;}
+.label-switching .innerWrap .explain{height:auto;}
+
+.field.on .label-switching .innerWrap{height:4rem; top:-1rem;}
+
+/* field icon */
+.input-area .field .icon-password{position:absolute; top:50%; right:0; transform:translateY(-50%);}
+
+/* font color */
+.fontColor1{color:#98222e}
+.fontColor2{color:#4ead5b}
+
+/* a link */
+.alink-line{display:inline-block; text-decoration:underline; font-weight:bold;}
 
 /* 저해상도 대응 */
 

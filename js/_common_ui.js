@@ -1,9 +1,9 @@
 (function(jq){
 	
 	var $ = jq;
-	var HANAMOB = HANAMOB || {};
+var LAS = LAS || {};
 
-	HANAMOB = {
+	LAS = {
 		initialize : function(){
 			this.detect = {
 				$wrap : $('#wrap'),
@@ -345,7 +345,7 @@
 
 
 	$(function () {
-		HANAMOB.initialize();
+		LAS.initialize();
 	});
 
 	

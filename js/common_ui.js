@@ -1,9 +1,9 @@
 (function(jq){
 	
 	var $ = jq;
-	var HANAMOB = HANAMOB || {};
+	var LAS = LAS || {};
 
-	HANAMOB = {
+	LAS = {
 		initialize : function(){
 			this.detect = {
 				$wrap : $('#wrap'),
@@ -22,10 +22,47 @@
 			this._dimmyClickClose(); // 딤닫기
 			this._popup(); // 버튼테스트
 			this._btn();
+			this._checkBox() // 체크박스
 
 			/* 플러그인 */
 			this.openPopup(); // 스와이프 셀렉트 팝업
 			this.topNavi(); // 스와이프 전체 텝매뉴
+		},
+		_checkBox : function(){
+			const $label = $("label.check-box-label");
+			const temp = [];
+			if(!$label.length) return;
+			$label.each(function(){
+				const label = $(this);
+				const style = (label.attr("stuyle"))?label.attr("stuyle"):null;
+				const check = label.hasClass("fill");
+				const small = (label.hasClass("small"))?true:label.hasClass("sm")?true:false;
+				label.wrap("<div class='check-box-wrap'></div>");
+				const source = '<div class="icon"><i class="fa fa-circle-thin b" aria-hidden="true"></i><div class="f"><i class="fa fa-check" aria-hidden="true"></i></div></div>';
+				label.parent().prepend(source);
+				if(style){
+					label.parent().attr("style",style);
+					label.removeAttr("style");
+				}
+				if(check){
+					label.removeClass("fill").parent().addClass("fill").find(".f").before('<div class="fill"><i class="fa fa-circle" aria-hidden="true"></i>')
+				}
+				if(small){
+					label.removeClass("small").removeClass("sm").parent().addClass("small");
+				}
+			})
+
+
+
+			const $checkbox = $label.parent();
+			if(!$checkbox.length) return;
+			$checkbox.click(function(ev){
+				if((ev.target.tagName).toLowerCase() === 'input') return;
+				$(this).toggleClass("checked");
+				const check = $(this).hasClass("checked");
+				$(this).find("input").prop("checked",check)
+			})
+
 		},
 		_checkRadio : function(){
 			var $wrap = $('#textAction');
@@ -141,9 +178,12 @@
 			if(!$wrap.length)return;
 			
 			var $focus = $wrap.find('.input input'),
-				$btnDel = $wrap.find('.btnDel');
-				$inputFake = $wrap.find('.inputFake');
+				$btnDel = $wrap.find('.btnDel'),
+				$inputFake = $wrap.find('.inputFake'),
 				$inputFake2 = $wrap.find('.inputFake button');
+			const $typeSwitching = $wrap.find('.icon-password');
+			const $lineBoxInput = $(".input-box-line input");
+			const $lineBoxBt = $(".input-box-line .btnDel");
 
 			$inputFake2.on('click', function(e){
 				var _this = $(this);
@@ -207,13 +247,12 @@
 					_this.next().children().hide(100);
 				}
 				$btnDel.on('click', function(){
-					$(this).parent().prev().val('');
-					$(this).hide(100)
+					$(this).parents(".input").find("input").val('');
 				});
 			});
 			$focus.on('blur', function(){
 				var _this = $(this);
-				
+				console.log("_this.prev() : ",_this.prev());
 				_this.prev().animate({
 					position : 'absolute',
 					top : 0,
@@ -233,6 +272,28 @@
 				// setTimeout(function(){
 				
 				// },50);
+			});
+			$typeSwitching.on('click', function(){
+				const $input = $(this).parents(".input").find("input");
+				const type = ($input.attr('type') === 'password')?'text':'password';
+				const addClass = (type === 'password')?true:false;
+				$input.attr('type',type);
+				console.log("add class : ",addClass)
+				if(addClass){
+					$(this).parents(".field").removeClass('txt');
+				}else{
+					$(this).parents(".field").addClass('txt')
+				}
+
+			});
+			$lineBoxInput.on('focus',function(){
+				$(this).parents('.input-box-line').addClass("focus");
+			}).on('blur',function(){
+				$(this).parents('.input-box-line').removeClass("focus");
+			})
+			$lineBoxBt.on('mouseenter',function(){
+				const $input = $(this).parents('.input-box-line').find("input");
+				$input.val('').focus();
 			});
 		
 		},
@@ -408,7 +469,7 @@
 
 
 	$(function () {
-		HANAMOB.initialize();
+		LAS.initialize();
 	});
 
 	

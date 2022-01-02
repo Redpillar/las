@@ -23,11 +23,11 @@ input[type="text"]{outline:none; border:0; color:#000; font-size:1.8rem; padding
 input:disabled {background-color:#f0f0f0; color:#707070;}
 
 /* 플레이스 홀더 */
-input[type='text']:-moz-input-placeholder{font-size:1.8rem; color:#bdbdbd}
-input[type='text']:-ms-input-placeholder{font-size:1.8rem; color:#bdbdbd}
-input[type='text']::-ms-input-placeholder{font-size:1.8rem; color:#bdbdbd}
-input[type='text']:-webkit-input-placeholder{font-size:1.8rem; color:#bdbdbd}
-input[type='text']::placeholder{font-size:1.8rem; color:#bdbdbd}
+input[type='text']:-moz-input-placeholder{font-size:1.5rem; color:#bdbdbd}
+input[type='text']:-ms-input-placeholder{font-size:1.5rem; color:#bdbdbd}
+input[type='text']::-ms-input-placeholder{font-size:1.5rem; color:#bdbdbd}
+input[type='text']:-webkit-input-placeholder{font-size:1.5rem; color:#bdbdbd}
+input[type='text']::placeholder{font-size:1.5rem; color:#bdbdbd}
 
 
 
@@ -75,7 +75,7 @@ input[type='text']::placeholder{font-size:1.8rem; color:#bdbdbd}
 .input-area .field .icon-password span{position:absolute; top:50%; left:50%; display:block !important; width:120%; height:1px; transform:rotate(45deg) translate(-50%,-50%); transform-origin:0 0; background:#000;}
 .input-area .field.txt .icon-password span{display:none !important;}
 .input-area .field .pw .btn-wrap {right:4rem;}
-.input-area .field .pw input[type='password']{padding-right:7rem;}
+.input-area .field .pw input[type='password']{/* padding-right:7rem; */font-size: 1.5rem;}
 
 
 /* 인풋 에러 영역 */
@@ -129,8 +129,8 @@ input[type='text']::placeholder{font-size:1.8rem; color:#bdbdbd}
 .area-clause p{font-size: 1.4rem;}
 
 /* 입력박스 */
-.input-box-line{position:relative; border:0.2rem solid #468dec; border-radius:0.3rem;}
-.input-box-line label{position:absolute; top:0; left:1rem; padding:0 0.5rem; color:#468dec; transform:translateY(-50%); background:#fff;}
+.input-box-line{position:relative;border: 0.2rem solid #ddd;border-radius:0.3rem;}
+.input-box-line label{position:absolute;top:0;left:1rem;font-size: 1.4rem;font-weight: 500;padding:0 0.5rem;color: #111;transform:translateY(-50%);background:#fff;}
 .input-box-line input{padding-left:1.5rem;}
 .input-box-line .btn-wrap {position: absolute; top:50%; right:1rem; display:none; transform:translateY(-50%);}
 .input-box-line.focus .btn-wrap {display:block;}

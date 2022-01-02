@@ -38,6 +38,7 @@ input[type='text']::placeholder{font-size:1.5rem; color:#bdbdbd}
 .input-area .field .input input[type="text"].money {text-align:right; font-weight:700;}
 .input-area .field .input.space input[type="text"] {padding:1.3rem 12rem 1.3rem .5rem;}
 .input-area .field .input.space2 input[type="text"] {padding:1.3rem 15rem 1.3rem .5rem;}
+.input-area .field .input.space3 input[type="text"] {padding:1.3rem 7.5rem 1.3rem .5rem;}
 
 
 .input-area .field .inputFake {height:4.4rem; padding:1.3rem 4rem 1.3rem .5rem; position: relative; border-bottom:1px solid #ddd; box-sizing: border-box;}
@@ -64,7 +65,7 @@ input[type='text']::placeholder{font-size:1.5rem; color:#bdbdbd}
 
 .input-area .field.on .btn-wrap .btnDel {display:inline-block; width:2rem; height:2rem; background-position:-9.9rem  -6.9rem;}
 .input-area .field.on .btn-wrap button + button {margin-left:.5rem;}
-.input-area .field .btn-wrap .timer {font-size:1.4rem; color:#008288;}
+.input-area .field .btn-wrap .timer {font-size:1.4rem; color:#000;}
 .input-area .field .label {position:absolute; top:4rem; opacity:0; font-size:1.6rem; padding-left:.5rem; }
 .input-area .field .label.type02 {top:2.7rem}
 

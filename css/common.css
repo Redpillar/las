@@ -469,7 +469,7 @@ table caption,
 
 
 /* login */
-.login-box{height:calc(100% - 8rem);}
+.login-box{height:calc(100% - 15.3rem);}
 .login-box .head{height:25rem; display:flex; align-items:center; justify-content:flex-start; flex-wrap:wrap; padding:0 3.5rem; font-size:2.2rem; line-height:2.5rem; color:#fff; font-weight:bold; background:linear-gradient(135deg, #98222c, #be417b);box-sizing: border-box;}
 .login-box .head .big{font-size:3.7rem;}
 .login-box .head div{width:100%;}
@@ -481,6 +481,7 @@ table caption,
 
 /* link style */
 .link-icon-arr{display:flex; justify-content:space-between; font-size:1.8rem; font-weight:bold;}
+.line-lost-things{font-size:1.2rem; color:#111;}
 
 /* step-wrap */
 .step-wrap{padding: 0rem 0 3rem;}
@@ -500,6 +501,29 @@ table caption,
 .top-info-set .top-icon{text-align:center;}
 .top-info-set .top-icon span{display:inline-block; width:5rem; height:5rem; border-radius:1rem; border:0.1rem solid #be417b; background:linear-gradient(135deg, #98222c, #be417b);}
 .top-info-set h1{margin:1rem 0 0; font-size:2rem; font-weight:bold; text-align:center;}
+.top-info-set .link{display:block; margin:0.5rem 0 0 0; text-align:center;}
+.top-info-set .link a{font-size:1.4rem; color:#000;}
+
+.top-info-set + .input-box-line{margin-top:4rem;}
+
+/* text-info-box */
+.text-info-box{margin:4rem 0 0 0; font-size:1.4rem; color:#111;}
+
+/* shpping */
+.shopping-box h1{padding:2rem 0 1.5rem; font-size:1.6rem; color:#000; text-align:center;}
+.shopping-box .list-box{width:calc(100% - 1rem); margin:0 auto; padding:1rem; border:1px solid #ededed; box-shadow:0.2rem 0.2rem 0.4rem rgba(0,0,0,0.2)}
+.shopping-box .list-box .head{display:flex; justify-content:space-between; padding:0 0 0.5rem 0; border-bottom:1px solid #ededed}
+.shopping-box .list-box .head a{font-size:1.4rem; font-weight:bold;}
+.shopping-box .list-box .head a i{margin-left:0.5rem;}
+.shopping-box .list-box .head .range{font-size:1rem;}
+.shopping-box .list-box .step-box{padding:1rem 0 0;}
+.shopping-box .list-box .step-box .tit{padding:1rem 0 0.5rem; font-size:1.2rem; font-weight:bold;}
+.shopping-box .list-box .step-box ul{display:flex; justify-content:space-between;}
+.shopping-box .list-box .step-box ul > li{position:relative; width:25%}
+.shopping-box .list-box .step-box ul > li .num{display:block; font-weight:bold; font-size:1.4rem; text-align:center;}
+.shopping-box .list-box .step-box ul > li h2{display:block; font-weight:bold; font-size:1rem; text-align:center;}
+.shopping-box .list-box .step-box ul > li .fa{position:absolute; top:43%; right:0; transform:translateY(-50%);}
+
 
 /* 저해상도 대응 */
 

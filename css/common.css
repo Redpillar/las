@@ -474,14 +474,17 @@ table caption,
 .login-box .con .innerWrap > *{display:block;}
 .login-box .con .innerWrap > button{width:20rem;}
 .login-box .con .innerWrap > button + button{margin-top:1rem;}
-.login-box .con .innerWrap .link-icon-arr{display:flex; margin-top:10rem;}
+.login-box .con .innerWrap .link-icon-arr{display:flex; width:15rem; margin:10rem auto 0;}
 
 /* link style */
 .link-icon-arr{display:flex; justify-content:space-between; font-size:1.8rem; font-weight:bold;}
 
+/* step-wrap */
+.info-wrap .step-wrap{padding:2rem 0 4rem;}
+.step-wrap .tit{margin-top:0.3rem;}
 
 /* footer */
-footer{font-size:1.2rem;}
+footer, footer a{font-size:1.2rem; color:#959595;}
 
 /* 저해상도 대응 */
 

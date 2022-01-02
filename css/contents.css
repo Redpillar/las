@@ -187,11 +187,11 @@
 .set-list ul > li > a > i { color: #98222c;}
 
 /* sns login */
-.sns-list ul > li {display: flex; justify-content: flex-start; align-items: center; border-radius: 2.1rem; border:1px solid #ddd; padding-left: 2rem; margin-top: 1rem;}
-.sns-list ul > li::before {display: block; content:''; width:2.4rem; height:2.4rem; background: url(../images/sns_logo03.png); background-size: 100% auto; overflow: hidden; border-radius: 50%;}
+.sns-list ul > li {display: flex;/* justify-content: flex-start; */align-items: center;border-radius: 2.1rem;border:1px solid #ddd;padding-left: 2rem;margin-top: 1rem;}
+.sns-list ul > li::before {display: block;content:'';width:2.4rem;height:2.4rem;background: url(../images/sns_logo03.png);background-size: 100% auto;overflow: hidden;border-radius: 50%;}
 .sns-list ul > li:nth-of-type(2)::before { background: url(../images/sns_logo01.png); background-size: 100% auto; }
 .sns-list ul > li:nth-of-type(3)::before { background: url(../images/sns_logo02.png); background-size: 100% auto; }
-.sns-list ul > li a {display:block;font-size: 1.3rem;padding: 1rem;width: 100%;}
+.sns-list ul > li a {display:block;font-size: 1.3rem;padding: 1rem;flex: 1;width: 100%;}
 
 .sns {display:block; width:2.4rem; height:2.4rem; background: url(../images/sns_logo03.png); background-size: 100% auto; overflow: hidden; border-radius: 50%;}
 .sns.facebook {background: url(../images/sns_logo01.png); background-size: 100% auto;}
@@ -203,12 +203,15 @@
 .step-wrap .tit {font-size: 1.6rem; font-weight: 500; color:#be417b}
 .step-wrap .step {width: 12rem; display: flex; justify-content: space-between; align-items: center;}
 .step-wrap .step > li {background:#fff; font-size: 1.2rem; color:#be417b; width: 2rem; height: 2rem; text-align: center; border-radius: 50%; border:2px solid #be417b;}
-.step-wrap .step > li.active {background:#be417b; color:#fff;}
+.step-wrap .step > li ~ li {background:#be417b; color:#fff;}
+.step-wrap .step > li.active {background:#fff; color:#be417b;  border:2px solid #be417b;}
 
 
 .gap {height: 1px; border-top: 1px dashed #ddd; margin: 1rem 0 1rem}
 
 .top-txt {font-size: 1.4rem}
+
+.account {color:#be417b; font-size: 1.8rem; font-weight: 700; text-align: center; margin: 2rem 0 2rem}
 
 /* The switch - the box around the slider */
 .switch {

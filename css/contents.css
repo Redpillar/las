@@ -238,7 +238,25 @@
 
 
 
+/* 마이페이지 */
+.my-wrap .my-main {padding: 2rem 2rem 7rem;background: linear-gradient(135deg, #9e6cdb, #c462b5, #f75584);position: relative;margin: 0 -2rem 4.5rem !important; }
+.my-wrap .my-main .name {font-size: 1.5rem; color:#fff; margin-bottom: .5rem }
+.my-wrap .my-main .link > li {display: inline-block; color:#fff; margin-right: 1rem;}
+.my-wrap .my-main .link > li a{font-size: 1.2rem; color: rgba(255, 255, 255, .5); text-decoration: underline;}
+.my-wrap .my-main .link > li a i {margin-left: .4rem}
+.my-wrap .my-main .item-box {display: flex; justify-content: space-between; flex-wrap: wrap; margin-top: 2rem}
+.my-wrap .my-main .item-box .item:nth-child(even)::before {content:'';display: block; width: 1px;height: 2rem;background: #fff; position: absolute; top: 50%; margin-top :-1rem}
+.my-wrap .my-main .item-box .item {position: relative; width: 50%; text-align: center;}
+.my-wrap .my-main .item-box .item .tit{display: block; font-size: 1.2rem; font-weight: normal !important; color:#fff; margin-bottom: .5rem}
+.my-wrap .my-main .item-box .item .num{font-size: 2rem; font-weight: bold; color:#fff}
 
+.my-wrap .my-main .btm-box {position: absolute;bottom: -4.5rem;left: 2rem;right:2rem;background: #fff;box-sizing: border-box;padding-bottom: 1rem;border-radius:1rem;box-shadow: 2px 2px 4px rgb(149 149 149 / 20%);}
+.my-wrap .my-main .btm-box ul {width: 100%;}
+.my-wrap .my-main .btm-box ul> li {display: flex; align-items: center; justify-content: space-between;  font-size: 1.3rem;  padding: 1rem 1rem 0;}
+.my-wrap .my-main .btm-box ul> li> button{background: linear-gradient(135deg, #9e6cdb, #c462b5, #f75584); height: 3rem;  border-radius: 1.5rem ; color:#fff; font-size: 1.2rem; padding: 0 1rem 0;}
+
+.my-wrap .b-link {width: 26rem; padding-top: 2rem; display: flex;justify-content: space-between;align-items: center; margin:0 auto;}
+.my-wrap .b-link li> a { color:#111; font-size: 1.2rem; padding: 0 .2rem 0; border-bottom:1px solid rgba(149, 149, 149, .2);width: 100%;}
 
 
 

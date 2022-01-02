@@ -465,6 +465,7 @@ table caption,
 /* a link */
 .alink-line{display:inline-block;text-decoration:underline; font-size: 1.3rem; color:#666}
 
+
 /* login */
 .login-box{height:calc(100% - 8rem);}
 .login-box .head{height:25rem; display:flex; align-items:center; justify-content:flex-start; flex-wrap:wrap; padding:0 3.5rem; font-size:2.2rem; line-height:2.5rem; color:#fff; font-weight:bold; background:linear-gradient(135deg, #98222c, #be417b);box-sizing: border-box;}
@@ -483,8 +484,14 @@ table caption,
 .step-wrap{padding:2rem 0 4rem;}
 .step-wrap .tit{margin-top:0.3rem;}
 
+/* gap */
+.gap.t2{margin:3rem 0 2rem;}
+
 /* footer */
 footer, footer a{font-size:1.2rem; color:#959595;}
+
+/* btn-set */
+.check-box-wrap + .btn-set{margin-top:2rem;}
 
 /* 저해상도 대응 */
 

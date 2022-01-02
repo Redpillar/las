@@ -133,7 +133,7 @@ input[type='text']::placeholder{font-size:1.5rem; color:#bdbdbd}
 .area-clause.full{height:auto; border:0; background:transparent;}
 
 /* 입력박스 */
-.input-box-line{position:relative;border: 0.2rem solid #ddd;border-radius:0.3rem;}
+.input-box-line{position:relative; margin:1rem 0 0 0; border: 0.2rem solid #ddd; border-radius:0.3rem;}
 .input-box-line label{position:absolute;top:0;left:1rem;font-size: 1.4rem;font-weight: 500;padding:0 0.5rem;color: #111;transform:translateY(-50%);background:#fff;}
 .input-box-line input{padding-left:1.5rem;}
 .input-box-line .btn-wrap {position: absolute; top:50%; right:1rem; display:none; transform:translateY(-50%);}

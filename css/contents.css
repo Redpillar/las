@@ -208,7 +208,7 @@
 .step-wrap .step > li.active ~ li {background:#fff; color:#be417b;  border:2px solid #be417b;}
 
 
-.gap {height: 1px; border-top: 1px dashed #ddd; margin: 1rem 0 1rem}
+.gap {height: 1px; border-top: 1px dashed #ddd; margin: 1rem 0 1rem !important; }
 
 .top-txt {font-size: 1.4rem}
 

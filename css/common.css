@@ -183,11 +183,11 @@ table caption,
 
 
 /* Layout */
-#header {position:fixed; top:0; left:0; width:100%; height:44px; text-align:center; line-height:44px; z-index:100; color:#fff; background:linear-gradient(135deg, #98222c, #be417b);}
+#header {position:fixed;top:0;left:0;width:100%;padding: 1.5rem 0;text-align:center;z-index:100;color:#fff;background:linear-gradient(135deg, #98222c, #be417b);box-sizing: border-box;}
 
-#header > .arr{position:absolute; top:0; left:0; display:flex; align-items:center; justify-content:center; width:30px; height:100%;}
+#header > .arr{position:absolute; top:0; left:0; display:flex; align-items:center; justify-content:center; width:5rem; height:100%;}
 #header > .arr i{font-size:3.5rem;}
-#header > h1{font-size:2rem; font-weight:bold;}
+#header > h1{font-size:1.8rem; font-weight:bold;}
 
 #header .navigator {position: relative; background-color:#fff}
 #header .navigator button {position:absolute; top:0; width:4.4rem; height:4.4rem;}
@@ -206,7 +206,7 @@ table caption,
 
 
 #container {width:100%; height:100%; background:#fff; box-sizing:border-box; }
-#contents {width:100%; height:100%; padding:4.4rem 2rem 0 2rem; box-sizing:border-box}
+#contents {width:100%;height:100%;padding: 5rem 2rem 0 2rem;box-sizing:border-box;}
 
 /* Text */
 .top-txt-area01 {margin-top:4rem}
@@ -387,18 +387,18 @@ table caption,
 
 
 /* 체크박스 */
-.check-box-wrap{position:relative; display:inline-block; width:100%; font-size:0;}
+.check-box-wrap{position:relative;display: flex;widht: 100%;align-items: center;/* vertical-align: top; */font-size:0;}
 .check-box-wrap .icon{position:relative; display:inline-block;}
-.check-box-wrap .icon i{font-size:4rem; color:#bfbfbf; transition: color ease 0.5s;}
+.check-box-wrap .icon i{font-size: 3rem;color:#bfbfbf;transition: color ease 0.5s;}
 .check-box-wrap .icon > .f i{font-size:3.8rem; transition: color ease 0.5s;}
 .check-box-wrap .icon > .f{position:absolute; top:50%; left:0.2rem; z-index:2; width:0; height:3rem; overflow:hidden; transition:width ease 0.25s; transform:translateY(-50%)}
 .check-box-wrap .icon > .f i{font-size:3.0rem;}
 .check-box-wrap.checked .icon > .f{width:3rem;}
 .check-box-wrap.checked .icon i{color:#98222e;}
-.check-box-wrap .check-box-label{display:inline-flex; align-items:center; width:calc(100% - 40px); height:4rem; padding:0.3rem 0 0 1rem; font-size:2rem; color:#000; vertical-align:top; box-sizing:border-box;}
+.check-box-wrap .check-box-label{display:inline-flex;align-items:center;width:calc(100% - 40px);height:4rem;padding: 0rem 0 0 1rem;font-size: 1.6rem;color:#000;vertical-align:top;font-weight: 500;box-sizing:border-box;}
 
 .check-box-wrap.fill .icon{transition:none;}
-.check-box-wrap.fill .fill{position:absolute; top:0; left:0; width:4rem; height:100%; overflow:hidden; opacity:0; transition:opacity ease 0.3s;}
+.check-box-wrap.fill .fill{position:absolute;top:0;left:0;width:4rem;height:100%;overflow:hidden;opacity:0;transition:opacity ease 0.3s;}
 .check-box-wrap.fill .fill i{color:#98222e;}
 .check-box-wrap.fill .f i{color:#fff; opacity:0; transition:none;}
 .check-box-wrap.fill.checked .b{color:#bfbfbf;}
@@ -437,7 +437,7 @@ table caption,
 
 /* label switching */
 .label-switching{position:relative; height:2rem; overflow:hidden;}
-.label-switching .tit{position:absolute; top:0; left:0; width:100%; height:2rem; font-size:2rem; font-weight:bold; transition:top ease 0.5s;}
+.label-switching .tit{position:absolute;top:0;left:0;width:100%;height:2rem;font-size: 1.5rem;font-weight:bold;transition:top ease 0.5s;}
 .label-switching .explain{position:absolute; top:2rem; left:0; width:100%; height:2rem; font-size:1.6rem; transition:top ease 0.5s;}
 
 .field.on .label-switching .tit{top:-2rem;}

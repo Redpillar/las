@@ -186,7 +186,12 @@
 .set-list ul > li > a {font-size: 1.3rem; color:#2c3030; width: 100%; display: flex; justify-content: space-between; align-items: center;}
 .set-list ul > li > a > i { color: #98222c;}
 
-
+/* sns login */
+.sns-list ul > li {display: flex; justify-content: flex-start; align-items: center; border-radius: 2.1rem; border:1px solid #ddd; padding-left: 2rem; margin-top: 1rem;}
+.sns-list ul > li::before {display: block; content:''; width:2.4rem; height:2.4rem; background: url(../images/sns_logo03.png); background-size: 100% auto; overflow: hidden; border-radius: 50%;}
+.sns-list ul > li:nth-of-type(2)::before { background: url(../images/sns_logo01.png); background-size: 100% auto; }
+.sns-list ul > li:nth-of-type(3)::before { background: url(../images/sns_logo02.png); background-size: 100% auto; }
+.sns-list ul > li a {display:block; font-size: 1.3rem; padding: 1rem; }
 
 footer {padding:2rem}
 footer .terms {display: flex; justify-content: space-between;}

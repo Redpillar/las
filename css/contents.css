@@ -247,7 +247,12 @@
 
 
 
+/* footer */
 
-
-footer {padding:2rem}
-footer .terms {display: flex; justify-content: space-between;}
+footer {margin-top: 5rem; padding:2rem; background: #3c3c3c;}
+footer .terms {display: flex; justify-content: space-between; align-items: center;}
+footer .terms >li {display: flex; justify-content: space-between; align-items: center; width: 100%;}
+footer .terms >li:first-of-type::before  {display: none;}
+footer .terms >li::before {display: block; content: ''; width: 1px; height: 1rem; background: rgba(149, 149, 149, .3);}
+footer .terms >li > a {font-size:1.2rem; color:#959595; width: 100%; text-align: center;}
+footer .copy {padding-top: 1.2rem; margin-top: 1rem; font-size:1.2rem; color:#959595; border-top: 1px dashed rgba(149, 149, 149, .2)}

@@ -226,7 +226,8 @@
 .switch input:checked + .slider:before {-webkit-transform: translateX(26px);-ms-transform: translateX(26px);transform: translateX(26px);}
   
 
-.btn-set .btn {}
+.btn-set .btn {border:1px solid #ddd; border-radius: .3rem;width: 100%; text-align: center; margin: 1rem 0;}
+.btn-set .btn.a {color:#666; padding: .8rem; font-size: 1.3rem; }
 
 
 

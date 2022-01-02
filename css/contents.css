@@ -183,7 +183,7 @@
 
 /* 계정 세팅 */
 .set-list ul > li {margin-top: .7rem; }
-.set-list ul > li > a {font-size: 1.3rem; color:#2c3030; width: 100%; display: flex; justify-content: space-between; align-items: center;}
+.set-list ul > li > a {font-size: 1.3rem;color: #111;width: 100%;display: flex;justify-content: space-between;align-items: center;}
 .set-list ul > li > a > i { color: #98222c;}
 
 /* sns login */
@@ -207,6 +207,8 @@
 
 
 .gap {height: 1px; border-top: 1px dashed #ddd; margin: 1rem 0 1rem}
+
+.top-txt {font-size: 1.4rem}
 
 /* The switch - the box around the slider */
 .switch {

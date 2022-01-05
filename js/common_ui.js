@@ -57,7 +57,7 @@
 			const $checkbox = $label.parent();
 			if(!$checkbox.length) return;
 			$checkbox.click(function(ev){
-				if((ev.target.tagName).toLowerCase() === 'input') return;
+				if((ev.target.tagName).toLowerCase() === 'input' || (ev.target.tagName).toLowerCase() === 'a') return;
 				$(this).toggleClass("checked");
 				const check = $(this).hasClass("checked");
 				$(this).find("input").prop("checked",check)

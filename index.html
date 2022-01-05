@@ -66,7 +66,7 @@
                     complete++;
                 }
                 if(textComplete == "진행중"){ 
-                    link = $(this).find("td.link").text().replace(/\#/g,'\%23');
+                    link = $(this).find("td.link").text();
                     $(this).find("td.link").contents().wrap( aLink ); 
                     $(this).find("td.link").children().attr( "href", link );
                     $(this).find('.link a').css({
@@ -109,7 +109,7 @@
 <body>
     <div class="work-wrap">
         <h1>LAS Mobile</h1>
-        <div class="modify-list">
+        <div class="modify-list">               
             <h2>수정내역</h2>
             <div class="list">
                 <!-- 2019.00.00 -->
@@ -268,11 +268,11 @@
                     <tr>
                         <td></td>
                         <td>약관동의</td>
-                        <td>#Landing_00_ko_KR</td>
+                        <td>Landing_00_ko_KR</td>
                         <td></td>   
                         <td></td>
                         <td></td>
-                        <td class="link">html/#Landing_00_ko_KR.html</td>
+                        <td class="link">html/Landing_00_ko_KR.html</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -283,11 +283,11 @@
                     <tr>
                         <td></td>
                         <td></td>
-                        <td>#Sign_up_01_term01_detail_ko_KR</td>
+                        <td>Sign_up_01_term01_detail_ko_KR</td>
                         <td></td>   
                         <td></td>
                         <td></td>
-                        <td class="link">html/#Sign_up_01_term01_detail_ko_KR.html</td>
+                        <td class="link">html/Sign_up_01_term01_detail_ko_KR.html</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -298,11 +298,11 @@
                     <tr>
                         <td></td>
                         <td></td>
-                        <td>#Sign_up_01_check100_ko_KR</td>
+                        <td>Sign_up_01_check100_ko_KR</td>
                         <td></td>   
                         <td></td>
                         <td></td>
-                        <td class="link">html/#Sign_up_01_check100_ko_KR.html</td>
+                        <td class="link">html/Sign_up_01_check100_ko_KR.html</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -315,11 +315,11 @@
                     <tr>
                         <td></td>
                         <td>계정정보 입력</td>
-                        <td>#Sign_up_02_name_ko_KR</td>
+                        <td>Sign_up_02_name_ko_KR</td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td class="link">html/#Sign_up_02_name_ko_KR.html</td>
+                        <td class="link">html/Sign_up_02_name_ko_KR.html</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -330,11 +330,11 @@
                     <tr>
                         <td></td>
                         <td></td>
-                        <td>3_#Sign_up_02_idle_ko_KR</td>
+                        <td>3_Sign_up_02_idle_ko_KR</td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td class="link">html/3_#Sign_up_02_idle_ko_KR.html</td>
+                        <td class="link">html/3_Sign_up_02_idle_ko_KR.html</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -345,7 +345,7 @@
                     <!-- <tr>
                         <td></td>
                         <td></td>
-                        <td>3_#Sign_up_02_idnew_ko_KR</td>
+                        <td>3_Sign_up_02_idnew_ko_KR</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -360,7 +360,7 @@
                     <tr>
                         <td></td>
                         <td></td>
-                        <td>3_#Sign_up_02_pwnew_ko_KR</td>
+                        <td>3_Sign_up_02_pwnew_ko_KR</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -375,7 +375,7 @@
                     <tr>
                         <td></td>
                         <td></td>
-                        <td>3_#Sign_up_02_pwsim_ko_KR</td>
+                        <td>3_Sign_up_02_pwsim_ko_KR</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -392,26 +392,11 @@
                     <tr>
                         <td></td>
                         <td>유효계정 인증 (E-mail)</td>
-                        <td>#Sign_up_03_request_pin_ko_KR</td>
+                        <td>Sign_up_03_request_pin_ko_KR</td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td class="link">html/#Sign_up_03_request_pin_ko_KR.html</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="name"></td>
-                        <td class="finish">진행중</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>#Sign_up_03_noti_resend_ko_KR</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="link">html/#Sign_up_03_noti_resend_ko_KR.html</td>
+                        <td class="link">html/Sign_up_03_request_pin_ko_KR.html</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -422,11 +407,11 @@
                     <tr>
                         <td></td>
                         <td></td>
-                        <td>#Sign_up_03_input_pin_ko_KR</td>
+                        <td>Sign_up_03_noti_resend_ko_KR</td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td class="link">html/#Sign_up_03_input_pin_ko_KR.html</td>
+                        <td class="link">html/Sign_up_03_noti_resend_ko_KR.html</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -437,11 +422,26 @@
                     <tr>
                         <td></td>
                         <td></td>
-                        <td>#Sign_up_03_invalid_pin_ko_KR</td>
+                        <td>Sign_up_03_input_pin_ko_KR</td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td class="link">html/#Sign_up_03_invalid_pin_ko_KR.html</td>
+                        <td class="link">html/Sign_up_03_input_pin_ko_KR.html</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="name"></td>
+                        <td class="finish">진행중</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>Sign_up_03_invalid_pin_ko_KR</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="link">html/Sign_up_03_invalid_pin_ko_KR.html</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -452,11 +452,11 @@
                     <tr>
                         <td></td>
                         <td></td>
-                        <td>#Sign_up_03_veri_email_ko_KR</td>
+                        <td>Sign_up_03_veri_email_ko_KR</td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td class="link">html/#Sign_up_03_veri_email_ko_KR.html</td>
+                        <td class="link">html/Sign_up_03_veri_email_ko_KR.html</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -469,11 +469,11 @@
                     <tr>
                         <td></td>
                         <td>유효계정 인증 (SMS)</td>
-                        <td>#Sign_up_04_invalid_pin_ko_KR</td>
+                        <td>Sign_up_04_invalid_pin_ko_KR</td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td class="link">html/#Sign_up_04_invalid_pin_ko_KR.html</td>
+                        <td class="link">html/Sign_up_04_invalid_pin_ko_KR.html</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -484,11 +484,11 @@
                     <tr>
                         <td></td>
                         <td></td>
-                        <td>#Sign_up_04_veri_sms_ko_KR</td>
+                        <td>Sign_up_04_veri_sms_ko_KR</td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td class="link">html/#Sign_up_04_veri_sms_ko_KR.html</td>
+                        <td class="link">html/Sign_up_04_veri_sms_ko_KR.html</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -501,26 +501,11 @@
                     <tr>
                         <td></td>
                         <td>ID,PW 인증 계정진입</td>
-                        <td>#Landing_00_ko_KR</td>
+                        <td>Landing_00_ko_KR</td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td class="link">html/#Landing_00_ko_KR.html</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="name"></td>
-                        <td class="finish">진행중</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>#Sign_in_01_valid_ko_KR</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="link">html/#Sign_in_01_valid_ko_KR.html</td>
+                        <td class="link">html/Landing_00_ko_KR.html</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -531,11 +516,26 @@
                     <tr>
                         <td></td>
                         <td></td>
-                        <td>#Account_view_01_my_ko_KR</td>
+                        <td>Sign_in_01_valid_ko_KR</td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td class="link">html/#Account_view_01_my_ko_KR.html</td>
+                        <td class="link">html/Sign_in_01_valid_ko_KR.html</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="name"></td>
+                        <td class="finish">진행중</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>Account_view_01_my_ko_KR</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="link">html/Account_view_01_my_ko_KR.html</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -548,26 +548,11 @@
                     <tr>
                         <td></td>
                         <td>SNS 인증 계정진입</td>
-                        <td>#Sign_in_00_idle_ko_KR</td>
+                        <td>Sign_in_00_idle_ko_KR</td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td class="link">html/#Sign_in_00_idle_ko_KR.html</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="name"></td>
-                        <td class="finish"></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>#Sign_in_00_idle_ko_KR_login</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="link">html/#Sign_in_00_idle_ko_KR_login.html</td>
+                        <td class="link">html/Sign_in_00_idle_ko_KR.html</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -578,11 +563,11 @@
                     <tr>
                         <td></td>
                         <td></td>
-                        <td>#Sign_in_00_idle_ko_KR_access</td>
+                        <td>Sign_in_00_idle_ko_KR_login</td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td class="link">html/#Sign_in_00_idle_ko_KR_access.html</td>
+                        <td class="link">html/Sign_in_00_idle_ko_KR_login.html</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -593,11 +578,26 @@
                     <tr>
                         <td></td>
                         <td></td>
-                        <td>#Sign_in_00_idle_ko_KR_selected</td>
+                        <td>Sign_in_00_idle_ko_KR_access</td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td class="link">html/#Sign_in_00_idle_ko_KR_selected.html</td>
+                        <td class="link">html/Sign_in_00_idle_ko_KR_access.html</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="name"></td>
+                        <td class="finish"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>Sign_in_00_idle_ko_KR_selected</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="link">html/Sign_in_00_idle_ko_KR_selected.html</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -610,26 +610,11 @@
                     <tr>
                         <td></td>
                         <td>ID 찾기</td>
-                        <td>#Sign_in_00_idle_ko_KR</td>
+                        <td>Sign_in_00_idle_ko_KR</td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td class="link">html/#Sign_in_00_idle_ko_KR.html</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="name"></td>
-                        <td class="finish"></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>#Find_id_01_idle_ko_KR</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="link">html/#Find_id_01_idle_ko_KR.html</td>
+                        <td class="link">html/Sign_in_00_idle_ko_KR.html</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -640,11 +625,26 @@
                     <tr>
                         <td></td>
                         <td></td>
-                        <td>#Find_id_01_birth_ko_KR</td>
+                        <td>Find_id_01_idle_ko_KR</td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td class="link">html/#Find_id_01_birth_ko_KR.html</td>
+                        <td class="link">html/Find_id_01_idle_ko_KR.html</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="name"></td>
+                        <td class="finish"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>Find_id_01_birth_ko_KR</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="link">html/Find_id_01_birth_ko_KR.html</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -657,26 +657,11 @@
                     <tr>
                         <td></td>
                         <td>비밀번호 재설정</td>
-                        <td>#Auth_01_name_ko_KR</td>
+                        <td>Auth_01_name_ko_KR</td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td class="link">html/#Auth_01_name_ko_KR.html</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="name"></td>
-                        <td class="finish"></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>#Auth_01_request_pin_ko_KR</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="link">html/#Auth_01_request_pin_ko_KR.html</td>
+                        <td class="link">html/Auth_01_name_ko_KR.html</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -687,11 +672,11 @@
                     <tr>
                         <td></td>
                         <td></td>
-                        <td>#Reset_pw_01_newpw_ko_KR</td>
+                        <td>Auth_01_request_pin_ko_KR</td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td class="link">html/#Reset_pw_01_newpw_ko_KR.html</td>
+                        <td class="link">html/Auth_01_request_pin_ko_KR.html</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -702,11 +687,26 @@
                     <tr>
                         <td></td>
                         <td></td>
-                        <td>#Reset_pw_01_newpw_ko_KR_success</td>
+                        <td>Reset_pw_01_newpw_ko_KR</td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td class="link">html/#Reset_pw_01_newpw_ko_KR_success.html</td>
+                        <td class="link">html/Reset_pw_01_newpw_ko_KR.html</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="name"></td>
+                        <td class="finish"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>Reset_pw_01_newpw_ko_KR_success</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="link">html/Reset_pw_01_newpw_ko_KR_success.html</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -719,11 +719,11 @@
                     <tr>
                         <td></td>
                         <td>계정정보</td>
-                        <td>#Account_view_01_profile_ko_KR</td>
+                        <td>Account_view_01_profile_ko_KR</td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td class="link">html/#Account_view_01_profile_ko_KR.html</td>
+                        <td class="link">html/Account_view_01_profile_ko_KR.html</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -736,26 +736,11 @@
                     <tr>
                         <td></td>
                         <td>계정정보 수정</td>
-                        <td>#Account_edit_01_pw_ko_KR</td>
+                        <td>Account_edit_01_pw_ko_KR</td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td class="link">html/#Account_edit_01_pw_ko_KR.html</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="name"></td>
-                        <td class="finish"></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>#Account_edit_01_editform_ko_KR</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="link">html/#Account_edit_01_editform_ko_KR.html</td>
+                        <td class="link">html/Account_edit_01_pw_ko_KR.html</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -766,11 +751,26 @@
                     <tr>
                         <td></td>
                         <td></td>
-                        <td>#Account_view_01_profile_ko_KR</td>
+                        <td>Account_edit_01_editform_ko_KR</td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td class="link">html/#Account_view_01_profile_ko_KR.html</td>
+                        <td class="link">html/Account_edit_01_editform_ko_KR.html</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="name"></td>
+                        <td class="finish"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>Account_view_01_profile_ko_KR</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="link">html/Account_view_01_profile_ko_KR.html</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -783,26 +783,11 @@
                     <tr>
                         <td></td>
                         <td>계정삭제</td>
-                        <td>#Account_edit_01_editform_ko_KR</td>
+                        <td>Account_edit_01_editform_ko_KR</td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td class="link">html/#Account_edit_01_editform_ko_KR.html</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="name"></td>
-                        <td class="finish"></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td>#Account_del_01_confirm_ko_KR</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="link">html/#Account_del_01_confirm_ko_KR.html</td>
+                        <td class="link">html/Account_edit_01_editform_ko_KR.html</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -813,11 +798,26 @@
                     <tr>
                         <td></td>
                         <td></td>
-                        <td>#Account_del_01_confirm_ko_KR</td>
+                        <td>Account_del_01_confirm_ko_KR</td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td class="link">html/#Account_del_01_confirm_ko_KR.html</td>
+                        <td class="link">html/Account_del_01_confirm_ko_KR.html</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="name"></td>
+                        <td class="finish"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>Account_del_01_confirm_ko_KR</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="link">html/Account_del_01_confirm_ko_KR.html</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -830,7 +830,7 @@
                     <!-- <tr>
                         <td></td>
                         <td>계정삭제 (3rd-Party)</td>
-                        <td>13_#Account_edit_01_editform_ko_KR</td>
+                        <td>13_Account_edit_01_editform_ko_KR</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -862,7 +862,7 @@
                     <!-- <tr>
                         <td></td>
                         <td></td>
-                        <td>14_#Account_view_01_my_ko_KR</td>
+                        <td>14_Account_view_01_my_ko_KR</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -877,7 +877,7 @@
                     <tr>
                         <td></td>
                         <td></td>
-                        <td>14_#Landing_00_ko_KR</td>
+                        <td>14_Landing_00_ko_KR</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -894,11 +894,11 @@
                     <tr>
                         <td></td>
                         <td>SNS연동 신규계정 생성</td>
-                        <td>#Account_del_01_confirm_ko_KR</td>
+                        <td>Account_del_01_confirm_ko_KR</td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td class="link">html/#Account_del_01_confirm_ko_KR.html</td>
+                        <td class="link">html/Account_del_01_confirm_ko_KR.html</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -909,11 +909,11 @@
                     <tr>
                         <td></td>
                         <td></td>
-                        <td>#Sign_in_05_snsin_ko_KR</td>
+                        <td>Sign_in_05_snsin_ko_KR</td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td class="link">html/#Sign_in_05_snsin_ko_KR.html</td>
+                        <td class="link">html/Sign_in_05_snsin_ko_KR.html</td>
                         <td></td>
                         <td></td>
                         <td></td>

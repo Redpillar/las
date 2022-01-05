@@ -522,7 +522,7 @@ table caption,
 .shopping-box .list-box .step-box{padding:1rem 0 0;}
 .shopping-box .list-box .step-box .tit{padding:1rem 0 0.5rem; font-size:1.2rem; font-weight:bold;}
 .shopping-box .list-box .step-box ul{display:flex; justify-content:space-between;}
-.shopping-box .list-box .step-box ul > li{position:relative; width:25%}
+.shopping-box .list-box .step-box ul > li{position:relative; flex:1;}
 .shopping-box .list-box .step-box ul > li .num{display:block; font-weight:bold; font-size:1.4rem; text-align:center;}
 .shopping-box .list-box .step-box ul > li h2{display:block; font-weight:bold; font-size:1rem; text-align:center;}
 .shopping-box .list-box .step-box ul > li .fa{position:absolute; top:43%; right:0; transform:translateY(-50%);}

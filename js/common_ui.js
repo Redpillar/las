@@ -23,10 +23,57 @@
 			this._popup(); // 버튼테스트
 			this._btn();
 			this._checkBox() // 체크박스
+			this._getVcBox() // 레이아웃 센터 정렬
 
 			/* 플러그인 */
 			this.openPopup(); // 스와이프 셀렉트 팝업
 			this.topNavi(); // 스와이프 전체 텝매뉴
+		},
+		_getVcBox : function(){
+			const that = this;
+			const cs = [".vc-box",".login-box .con"];
+			cs.forEach((c)=>{
+				that._vcBox(c);
+				that._vcBox_resizeEvent(c)   // 레이아웃 센터 정렬 리사이즈 이벤트 등록
+			})
+		},
+		_vcBox : function(c){
+			const that = this;
+			const $box = $(c);
+			let h = null;
+			let sum = null;
+			const fn = ()=>{
+				$box.each(function(i,n){
+					$(n).height("");
+					const diff_footer = ($("footer").length)?$("footer").innerHeight() + Number($("footer").css("margin-top").match(/\d+/g)[0]):0;
+					const winH = $("body").innerHeight()
+					const minH = $("#wrap").innerHeight();
+					if(minH <= winH){
+						const $children = $(n).nextAll();
+						let diffH = 0;
+						$children.each(function(){
+							diffH += $(this).innerHeight();
+						});
+						const top = $(n).offset().top;
+						const lc = diff_footer + diffH + top;
+						h = "calc(100vh - "+ lc +"px)";
+						$(n).height(h).attr("min-size",true);
+					}else{
+						$(n).attr("min-size",false);
+						
+					}
+				});
+			}
+			fn();
+			setTimeout(()=>{
+				fn();
+			},500)
+		},
+		_vcBox_resizeEvent : function(c){
+			const that = this;
+			$(window).resize(()=>{
+				that._vcBox(c);
+			});
 		},
 		_checkBox : function(){
 			const $label = $("label.check-box-label");
@@ -34,12 +81,18 @@
 			if(!$label.length) return;
 			$label.each(function(){
 				const label = $(this);
-				const style = (label.attr("stuyle"))?label.attr("stuyle"):null;
+				const style = (label.attr("style"))?label.attr("style"):null;
 				const check = label.hasClass("fill");
 				const small = (label.hasClass("small"))?true:label.hasClass("sm")?true:false;
+				const sg = label.attr("class").split(" ");
 				label.wrap("<div class='check-box-wrap'></div>");
 				const source = '<div class="icon"><i class="fa fa-circle-thin b" aria-hidden="true"></i><div class="f"><i class="fa fa-check" aria-hidden="true"></i></div></div>';
 				label.parent().prepend(source);
+				sg.forEach((c,n)=>{
+					if(c !== 'check-box-label'){
+						label.removeClass(c).parent().addClass(c);
+					}
+				})
 				if(style){
 					label.parent().attr("style",style);
 					label.removeAttr("style");

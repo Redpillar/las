@@ -72,8 +72,10 @@ table caption,
 
 .through {text-decoration:line-through !important}
 
-
-
+/* center box */
+.vc-box{display:flex;}
+.vc-box > .inner-wrap{flex:1;}
+.vc-box.vc{align-items:center;}
 
 /* 텍스트 박스 */
 .textarea {width:100%; resize: none; border:1px solid #ccc; background-color:#fff; font-size:1.4rem; padding:2rem 1.5rem; box-sizing:border-box; height:15rem}
@@ -205,8 +207,8 @@ table caption,
 #header .navigator .list li.on::after {display:block; content:""; width:.4rem; height:.4rem; background-color:#008288; position:absolute; left:50%; bottom:0; margin-left:-.2rem; border-radius:50%;}
 
 
-#container {width:100%;/* height:100%; */min-height:calc(100vh - 15rem); background:#fff;box-sizing:border-box;}
-#contents {width:100%;/* height:100%; */padding: 7rem 2rem 0 2rem;box-sizing:border-box;}
+#container {width:100%;/* height:100%; */min-height:calc(100vh - 15.3rem); background:#fff;box-sizing:border-box;}
+#contents {width:100%;/* height:100%; */padding: 7rem 2.5rem 0; box-sizing:border-box;}
 #contents.t2 {padding-top:5rem;}
 
 /* Text */
@@ -405,6 +407,9 @@ table caption,
 .check-box-wrap.fill.checked .b{color:#bfbfbf;}
 .check-box-wrap.fill.checked .fill{opacity:1;}
 .check-box-wrap.fill.checked .f i{animation:fillCheck 0.3s ease 0.1s forwards alternate;}
+.check-box-wrap.txt-size-xsmall .check-box-label{font-size:1rem;} 
+.check-box-wrap.txt-size-small .check-box-label{font-size:1.4rem;} 
+.check-box-wrap.txt-size-middle .check-box-label{font-size:1.8rem;} 
 
 /* small */
 .check-box-wrap.small .icon{height:2rem;}
@@ -456,7 +461,7 @@ table caption,
 .label-switching .innerWrap{position:relative; height:2rem; overflow:hidden; transition:height ease 0.5s;}
 .label-switching .innerWrap .explain{height:auto;}
 
-.field.on .label-switching .innerWrap{height:4rem; top:-1rem;}
+.field.on .label-switching.l2 .innerWrap{height:4rem; top:-1rem;}
 
 /* field icon */
 .input-area .field .icon-password{position:absolute; top:50%; right:0; transform:translateY(-50%);}
@@ -470,11 +475,14 @@ table caption,
 
 
 /* login */
-.login-box{height:calc(100vh - 15.3rem);}
+.login-box.min{height:calc(100vh - 15.3rem);}
 .login-box .head{height:25rem; display:flex; align-items:center; justify-content:flex-start; flex-wrap:wrap; padding:0 3.5rem; font-size:2.2rem; line-height:2.5rem; color:#fff; font-weight:bold; background:linear-gradient(135deg, #98222c, #be417b);box-sizing: border-box;}
 .login-box .head .big{font-size:3.7rem;}
 .login-box .head div{width:100%;}
-.login-box .con{display:flex; align-items:center; justify-content:center; height:calc(100% - 25rem);}
+.login-box .con{display:flex; align-items:center; justify-content:center;}
+.login-box .con > .innerWrap{margin-top:2.5rem;}
+.login-box .con[min-size=false]{margin-top:6rem; margin-bottom:2rem;}
+.login-box .con[min-size=false] > .innerWrap{margin-top:0;}
 .login-box .con .innerWrap > *{display:block;}
 .login-box .con .innerWrap > button{width:20rem;}
 .login-box .con .innerWrap > button + button{margin-top:1rem;}
@@ -527,6 +535,18 @@ table caption,
 .shopping-box .list-box .step-box ul > li h2{display:block; font-weight:bold; font-size:1rem; text-align:center;}
 .shopping-box .list-box .step-box ul > li .fa{position:absolute; top:43%; right:0; transform:translateY(-50%);}
 
+/* clause-list-box */
+.clause-list-box > ul > li > .tit{display:flex; justify-content:space-between; align-items:center;}
+.clause-list-box > ul > li > .tit .check-box-wrap{flex:1;}
+
+/* cb-type-select-box */
+.cb-type-select-box{padding:3rem 0 4rem 0;}
+.cb-type-select-box .check-box-wrap + .check-box-wrap{margin-top:1.5rem;}
+
+/* both-txt-footerTop */
+.both-txt-footerTop{font-size:1.2rem; color:#be417b;}
+.vc-box[min-size=false] + .both-txt-footerTop{padding-top:4rem;}
+
 
 /* 저해상도 대응 */
 
@@ -534,4 +554,11 @@ table caption,
 @media screen and (min-width: 320px) {
         
 
+}
+
+/* 가로모드 적용 css */
+@media (orientation: portrait){
+}
+/* 세로모드 적용 css */
+@media (orientation: landscape){
 }

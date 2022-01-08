@@ -34,8 +34,8 @@ input[type='text']::placeholder{font-size:1.5rem; color:#bdbdbd}
 /* .input-area  */
 #contents > .input-area:first-child .field {padding-top:0;}
 .input-area .field {width:100%; padding-top:2.6rem; min-height:9.6rem; position: relative; box-sizing: border-box;}
-.input-area .field .input {height:4.4rem;  position: relative; border-bottom:1px solid #ddd;}
-.input-area .field .input input[type="text"] {padding:1.3rem 4rem 1.3rem .5rem;}
+.input-area .field .input {height: 4.4rem;position: relative;border-bottom:1px solid #ddd;position: relative;}
+.input-area .field .input input[type="text"] {padding: 1.3rem 4rem 1.3rem 0rem;}
 .input-area .field .input input[type="text"].money {text-align:right; font-weight:700;}
 .input-area .field .input.space input[type="text"] {padding:1.3rem 12rem 1.3rem .5rem;}
 .input-area .field .input.space2 input[type="text"] {padding:1.3rem 15rem 1.3rem .5rem;}

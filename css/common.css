@@ -448,9 +448,9 @@ table caption,
 }
 
 /* label switching */
-.label-switching{position:relative; height:2rem; overflow:hidden;}
+.label-switching{position:relative;height:2rem;overflow:hidden;}
 .label-switching .tit{position:absolute;top:0;left:0;width:100%;height:2rem;font-size: 1.5rem;font-weight:bold;transition:top ease 0.5s;}
-.label-switching .explain{position:absolute; top:2.2rem; left:0; width:100%; height:2rem; font-size:1.6rem; transition:top ease 0.5s;}
+.label-switching .explain{position:absolute;top: 2.2rem;left:0;width:100%;height:2rem;font-size:1.6rem;transition:top ease 0.5s;}
 
 .field.on .label-switching .tit{top:-2rem;}
 .field.on .label-switching.only .tit{top:0;}
@@ -458,7 +458,7 @@ table caption,
 .field.on .label-switching.only .explain{top:2rem;}
 
 .label-switching.l2{z-index:2; overflow:visible;}
-.label-switching .innerWrap{position:relative; height:2rem; overflow:hidden; transition:height ease 0.5s;}
+.label-switching .innerWrap{position:relative;z-index: 1;height:2rem;overflow:hidden;transition:height ease 0.5s;}
 .label-switching .innerWrap .explain{height:auto; line-height:1.6rem;}
 
 .field.on .label-switching.l2 .innerWrap{height:4rem; top:-1rem;}

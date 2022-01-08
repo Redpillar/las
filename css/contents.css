@@ -183,26 +183,32 @@
 
 /* 계정 세팅 */
 .set-list ul > li {margin-top: .7rem; }
-.set-list ul > li > a {font-size: 1.3rem;color: #111;width: 100%;display: flex;justify-content: space-between;align-items: center;}
+.set-list ul > li > a {font-size: 1.4rem;color: #111;width: 100%;display: flex;justify-content: space-between;align-items: center;}
 .set-list ul > li > a > i { color: #98222c;}
+
+
+.set-list.b ul > li {border-bottom: 1px solid #ddd; }
+.set-list.b ul > li .tit .data {font-size:1.2rem; color:#888}
+.set-list.b ul > li > a {padding-bottom: 1rem;  padding-top: .5rem; color:#111}
 
 /* sns login */
 .sns-list ul > li {display: flex;/* justify-content: flex-start; */align-items: center;border-radius: 2.1rem;border:1px solid #ddd;padding-left: 2rem;margin-top: 1rem;}
 .sns-list ul > li::before {display: block;content:''; width:2.4rem;height:2.4rem;background: url(../images/sns_logo03.png);background-size: 100% auto;overflow: hidden;border-radius: 50%;}
-.sns-list ul > li.f::before { background: url(../images/sns_logo01.png); background-size: 100% auto; }
+.sns-list ul > li.f::before { background:#475993 url(../images/sns_logo01.png); background-size: 100% auto; background-position: -2px 0  }
 .sns-list ul > li.n::before { background: url(../images/sns_logo02.png); background-size: 100% auto; }
 .sns-list ul > li.g::before { background: url(../images/sns_logo03.png); background-size: 100% auto; }
 .sns-list ul > li.k::before { background: url(../images/sns_logo04.png); background-size: 100% auto; }
 .sns-list ul > li a {display:flex;font-size: 1.3rem;padding: 1rem;flex: 1;width: 100%;}
 
 .sns {display:block;width:2.4rem;height:2.4rem;background: url(../images/sns_logo03.png);background-size: 100% auto;overflow: hidden;border-radius: 50%;}
-.sns.facebook {background: url(../images/sns_logo01.png); background-size: 100% auto;}
+.sns.facebook {background:#475993 url(../images/sns_logo01.png); background-size: 100% auto; background-position: -2px 0}
 .sns.google   {background: url(../images/sns_logo03.png); background-size: 100% auto;}
 .sns.naver    {background: url(../images/sns_logo02.png); background-size: 100% auto;}
 .sns.kakao    {background: url(../images/sns_logo04.png); background-size: 100% auto;}
 
 .sns-txt {text-align: center; font-size: 1.4rem; color: #111}
 .sns-txt .sns {width: 4.5rem; height: 4.5rem; }
+.sns-txt .sns.facebook {background-color: #475993; }
 .sns-txt i {margin-right: 1rem; margin:0 auto 1rem; }
 
 
@@ -255,7 +261,7 @@
 
 
 /* 마이페이지 */
-.my-wrap .my-main {padding: 2rem 2rem 7rem;background: linear-gradient(135deg, #9e6cdb, #c462b5, #f75584);position: relative;margin: 0 -2rem 4.5rem !important; }
+.my-wrap .my-main {padding: 2rem 2rem 7rem; background: linear-gradient(135deg, #9e6cdb, #c462b5, #f75584);position: relative;margin: 0 -2.5rem 4.5rem !important; }
 .my-wrap .my-main .name {font-size: 1.5rem; color:#fff; margin-bottom: .5rem }
 .my-wrap .my-main .link > li {display: inline-block; color:#fff; margin-right: 1rem;}
 .my-wrap .my-main .link > li a{font-size: 1.2rem; color: rgba(255, 255, 255, .5); text-decoration: underline;}
@@ -288,10 +294,30 @@
 
 
 
+
+
+/* 레이어 팝업 */
+.pop-layer {position: fixed; left:0; right:0; bottom: -100%; z-index: 110; transition: bottom .5s;}
+.pop-layer.active {bottom : 0}
+.pop-layer.active::before {display: block;content:'';position: fixed;top:0;right:0;z-index: 0;bottom:0;left:0;background:rgba(0, 0, 0, .6);}
+.pop-layer .inner {height: calc(100vh - 3rem);position: relative;z-index: 100; background: #fff; border-radius: 1rem;}
+.pop-layer .tit {position: relative; padding: 1.5rem; font-size: 1.6rem; font-weight: bold;}
+.pop-layer .tit .close {width: 4rem; height: 4rem; position:absolute; top:50%; right:.5rem; margin-top: -2rem; display: flex; align-items: center; justify-content: center;}
+.pop-layer .tit .close::before {content:''; display: block; width: 2.2rem; height:2.2rem; background:url(../images/close.png);}
+.pop-layer .cont-area {padding:0 1rem 0}
+.pop-layer .cont-area .cont {border-top: 1px solid #ddd; padding:1rem 0 1rem; overflow: auto;}
+
+
+
+
+
+
+
 /* label switching */
 .label-switching.only {overflow: initial;}
 .label-switching.only .innerWrap {overflow: initial;}
 .label-switching.only .innerWrap .tit{ display: flex; justify-content: space-between; align-items: center;}
+
 
 
 

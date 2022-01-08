@@ -410,6 +410,7 @@ table caption,
 .check-box-wrap.txt-size-xsmall .check-box-label{font-size:1rem;} 
 .check-box-wrap.txt-size-small .check-box-label{font-size:1.4rem;} 
 .check-box-wrap.txt-size-middle .check-box-label{font-size:1.8rem;} 
+.field .check-box-wrap{margin-top:1rem;}
 
 /* small */
 .check-box-wrap.small .icon{height:2rem;}

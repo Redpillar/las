@@ -571,6 +571,12 @@ table caption,
 
 /* .field */
 .field-both-txt{padding:0; font-size:1.2rem; line-height:1.8rem; color:#777;}
+.field .select{display:flex; border-bottom:1px solid #ddd;}
+.field .select .las-select{flex:1;}
+
+/* las-select */
+.las-select{display:inline-block; padding:0.7rem 0.5rem;}
+.las-select select{padding:0.4rem 0; border:0;}
 
 /* info-box-member */
 .info-box-member{display:flex; flex-wrap:wrap;}

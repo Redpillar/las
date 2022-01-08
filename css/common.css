@@ -576,7 +576,7 @@ table caption,
 .info-box-member{display:flex; flex-wrap:wrap;}
 .info-box-member .member-pic{display:flex; align-items:center; justify-content:center; width:5rem; height:5rem; border-radius:100%; overflow:hidden; background:#ddd;}
 .info-box-member .member-info{width:calc(100% - 5rem); height:5rem; display:flex; flex-wrap:wrap}
-.info-box-member .member-info .id, .info-box-member .member-info .name{display:flex; align-items:center; width:100%; padding:0 0 0 1.5rem; font-size:1.4rem;}
+.info-box-member .member-info .id, .info-box-member .member-info .name{display:flex; align-items:center; width:100%; padding:0 0 0 1.5rem; font-size:1.8rem;}
 .info-box-member + .gap{margin-top:4rem;}
 
 /* 저해상도 대응 */

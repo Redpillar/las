@@ -410,6 +410,7 @@ table caption,
 .check-box-wrap.txt-size-xsmall .check-box-label{font-size:1rem;} 
 .check-box-wrap.txt-size-small .check-box-label{font-size:1.4rem;} 
 .check-box-wrap.txt-size-middle .check-box-label{font-size:1.8rem;} 
+.field .check-box-wrap{margin-top:1rem;}
 
 /* small */
 .check-box-wrap.small .icon{height:2rem;}
@@ -455,7 +456,8 @@ table caption,
 .field.on .label-switching .tit{top:-2rem;}
 .field.on .label-switching.only .tit{top:0;}
 .field.on .label-switching .explain{top:0rem; opacity:1;}
-.field.on .label-switching.only .explain{top:2rem;}
+.field.on .label-switching.only .explain{top:2rem; opacity:0}
+.label-switching.only .explain{display:none;}
 
 .label-switching.l2{z-index:2; overflow:visible;}
 .label-switching .innerWrap{position:relative;z-index: 1;height:2rem;overflow:hidden;transition:height ease 0.5s;}
@@ -514,6 +516,8 @@ table caption,
 /* set-list */
 .bothSet01 .set-list{margin:3rem 0 2rem;}
 .bothSet01 .sns-list{margin:2rem 0 0rem;}
+.set-list.line-none > ul > li{border-bottom-width:0;}
+.set-list ul > li > a .tit-b{font-size:1.5rem; font-weight:bold;}
 
 /* top-info-set */
 .top-info-set .top-icon{text-align:center;}
@@ -562,6 +566,16 @@ table caption,
 /* gab */
 .vc-box + .gap{margin-top:4rem;}
 
+/* top-txt */
+.hdt + .top-txt{margin-top:5rem;}
+
+/* .field */
+.field-both-txt{padding:0; font-size:1.2rem; line-height:1.8rem; color:#777;}
+
+/* info-box-member */
+.info-box-member{display:flex; flex-wrap:wrap;}
+.info-box-member .member-pic{width:10rem; height:10rem; border-radius:100%; overflow:hidden; background:red;}
+.info-box-member .member-name, .info-box-member .member-id{width:calc(100% - 10rem); height:5rem;}
 
 /* 저해상도 대응 */
 

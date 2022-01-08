@@ -70,6 +70,8 @@ input[type='text']::placeholder{font-size:1.5rem; color:#bdbdbd}
 .input-area .field .label {position:absolute; top:4rem; opacity:0; font-size:1.6rem; padding-left:.5rem; }
 .input-area .field .label.type02 {top:2.7rem}
 
+.input-area .field.minSize-none {min-height:auto; margin:1.3rem 0; padding-top:0;}
+
 /* field icon */
 .input-area .field .icon-password{position:absolute; top:50%; right:0; display:none; transform:translateY(-50%);}
 .input-area .field.on .icon-password{display:block;}

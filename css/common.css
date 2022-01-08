@@ -448,13 +448,13 @@ table caption,
 }
 
 /* label switching */
-.label-switching{position:relative;height:2rem;overflow:hidden;}
+.label-switching{position:relative;height:2rem;}
 .label-switching .tit{position:absolute;top:0;left:0;width:100%;height:2rem;font-size: 1.5rem;font-weight:bold;transition:top ease 0.5s;}
-.label-switching .explain{position:absolute;top: 2.2rem;left:0;width:100%;height:2rem;font-size:1.6rem;transition:top ease 0.5s;}
+.label-switching .explain{position:absolute;top: 2.2rem;left:0;width:100%;height:2rem;font-size:1.6rem;transition:top ease 0.5s, opacity ease 0.5s; opacity:0;}
 
 .field.on .label-switching .tit{top:-2rem;}
 .field.on .label-switching.only .tit{top:0;}
-.field.on .label-switching .explain{top:0rem;}
+.field.on .label-switching .explain{top:0rem; opacity:1;}
 .field.on .label-switching.only .explain{top:2rem;}
 
 .label-switching.l2{z-index:2; overflow:visible;}
@@ -462,13 +462,22 @@ table caption,
 .label-switching .innerWrap .explain{height:auto; line-height:1.6rem;}
 
 .field.on .label-switching.l2 .innerWrap{height:4rem; top:-1rem;}
+.field.on .label-switching.l3 .innerWrap{height:4.8rem; top:-3rem;}
 
 /* field icon */
 .input-area .field .icon-password{position:absolute; top:50%; right:0; transform:translateY(-50%);}
 
+/* sns-txt */
+.step-wrap + .sns-txt{margin-top:2.5rem;}
+/* top-txt */
+.sns-txt + .top-txt{margin-top:6rem;}
+
+/* input-area */
+.top-txt + .input-area{margin-top:3rem}
+
 /* font color */
 .fontColor1{color:#98222e}
-.fontColor2{color:#4ead5b}''
+.fontColor2{color:#4ead5b}
 /* a link */
 
 .alink-line{display:inline-block;text-decoration:underline; font-size: 1.3rem; color:#666}
@@ -520,7 +529,7 @@ table caption,
 
 /* shpping */
 .shopping-box{position:relative;}
-.shopping-box:before{content:""; position:absolute; top:0; left:-2rem; right:-2rem; height:0.7rem; background:#e7e6e6;}
+.shopping-box:before{content:""; position:absolute; top:0; left:-2.5rem; right:-2.5rem; height:0.7rem; background:#e7e6e6;}
 .shopping-box h1{margin:2rem 0 0 0; padding:3rem 0 1.5rem; font-size:1.6rem; color:#000; text-align:center;}
 .shopping-box .list-box{width:calc(100% - 1rem); margin:0 auto; padding:1rem; border:1px solid #ededed; box-shadow:0.2rem 0.2rem 0.4rem rgba(0,0,0,0.2)}
 .shopping-box .list-box .head{display:flex; justify-content:space-between; padding:0 0 0.5rem 0; border-bottom:1px solid #ededed}

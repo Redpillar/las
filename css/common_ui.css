@@ -19,7 +19,7 @@
 /*input text type*/
 input[type="password"],
 input[type="search"],
-input[type="text"]{outline:none; border:0; color:#000; font-size:1.8rem; padding:1.3rem 4rem 1.3rem .5rem;  box-sizing:border-box; width:100%; height:100%; font-weight: 100;}
+input[type="text"]{outline:none;border:0;color:#000;font-size:1.8rem;padding: 1.3rem 5rem 1.3rem .5rem;box-sizing:border-box;width:100%;height:100%;font-weight: 100;}
 input:disabled {background-color:#f0f0f0; color:#707070;}
 
 /* 플레이스 홀더 */
@@ -268,13 +268,13 @@ input[type='text']::placeholder{font-size:1.5rem; color:#bdbdbd}
 
 
 /* 텝 */
-.tab-area {position:relative; height:100%;}
-.tab-area .menu {font-size:0; position:absolute; top:0; left:0; right:0;}
+.tab-area {position:relative; height:100%; margin-top: 2rem;}
+.tab-area .menu {display: flex; justify-content: space-between; align-items: center;}
 .tab-area .menu li {display:inline-block; width:50%; position: relative;}
-.tab-area .menu li .tab-link {display:block; font-size:1.6rem; font-weight: 500; text-align:center; border-bottom:1px solid #ddd; padding:.9rem 0 1rem; color:#999; background-color:#fff;}
-.tab-area .menu li.on .tab-link{color:#008288}
-.tab-area .menu li.on .tab-link::after {display:block; content:""; height:2px; width:100%; background-color: #008288; position:absolute; bottom:0;}
-.tab-area .tab-content {display:none;  padding:5rem 2rem 2rem; overflow:auto; height:100%; box-sizing: border-box;}
+.tab-area .menu li .tab-link {display:block; font-size:1.4rem; font-weight: 500; text-align:center; border-bottom:1px solid #ddd; padding:.9rem 0 1rem; color:#999; background-color:#fff;}
+.tab-area .menu li.on .tab-link{color:#be417b}
+.tab-area .menu li.on .tab-link::after {display:block; content:""; height:2px; width:100%; background-color: #be417b; position:absolute; bottom:0;}
+.tab-area .tab-content {display:none; overflow:auto; height:100%; box-sizing: border-box;}
 .tab-area .tab-content.active {display:block;}
 
 

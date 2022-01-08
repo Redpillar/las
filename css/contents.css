@@ -188,15 +188,26 @@
 
 /* sns login */
 .sns-list ul > li {display: flex;/* justify-content: flex-start; */align-items: center;border-radius: 2.1rem;border:1px solid #ddd;padding-left: 2rem;margin-top: 1rem;}
-.sns-list ul > li::before {display: block;content:'';width:2.4rem;height:2.4rem;background: url(../images/sns_logo03.png);background-size: 100% auto;overflow: hidden;border-radius: 50%;}
-.sns-list ul > li:nth-of-type(2)::before { background: url(../images/sns_logo01.png); background-size: 100% auto; }
-.sns-list ul > li:nth-of-type(3)::before { background: url(../images/sns_logo02.png); background-size: 100% auto; }
-.sns-list ul > li a {display:block;font-size: 1.3rem;padding: 1rem;flex: 1;width: 100%;}
+.sns-list ul > li::before {display: block;content:''; width:2.4rem;height:2.4rem;background: url(../images/sns_logo03.png);background-size: 100% auto;overflow: hidden;border-radius: 50%;}
+.sns-list ul > li.f::before { background: url(../images/sns_logo01.png); background-size: 100% auto; }
+.sns-list ul > li.n::before { background: url(../images/sns_logo02.png); background-size: 100% auto; }
+.sns-list ul > li.g::before { background: url(../images/sns_logo03.png); background-size: 100% auto; }
+.sns-list ul > li.k::before { background: url(../images/sns_logo04.png); background-size: 100% auto; }
+.sns-list ul > li a {display:flex;font-size: 1.3rem;padding: 1rem;flex: 1;width: 100%;}
 
-.sns {display:block; width:2.4rem; height:2.4rem; background: url(../images/sns_logo03.png); background-size: 100% auto; overflow: hidden; border-radius: 50%;}
+.sns {display:block;width:2.4rem;height:2.4rem;background: url(../images/sns_logo03.png);background-size: 100% auto;overflow: hidden;border-radius: 50%;}
 .sns.facebook {background: url(../images/sns_logo01.png); background-size: 100% auto;}
 .sns.google   {background: url(../images/sns_logo03.png); background-size: 100% auto;}
 .sns.naver    {background: url(../images/sns_logo02.png); background-size: 100% auto;}
+.sns.kakao    {background: url(../images/sns_logo04.png); background-size: 100% auto;}
+
+.sns-txt {text-align: center; font-size: 1.4rem; color: #111}
+.sns-txt .sns {width: 4.5rem; height: 4.5rem; }
+.sns-txt i {margin-right: 1rem; margin:0 auto 1rem; }
+
+
+
+
 
 
 .step-wrap {position: relative; display: flex; justify-content: space-between;}
@@ -223,15 +234,17 @@
 .user-picture {font-size: 6rem}
 
 /* The switch - the box around the slider */
-.switch {position: relative;display: inline-block; width: 60px; height: 30px;}
+.switch {position: relative;display: inline-block;width: 40px;height: 20px;}
+
 /* Hide default HTML checkbox */
 .switch input {opacity: 0;width: 0;height: 0; }
+
 /* The slider */
-.switch .slider {position: absolute;cursor: pointer;top: 0;left: 0;right: 0;bottom: 0;background-color: #ccc;-webkit-transition: .4s;transition: .4s;border-radius: 34px;}
-.switch .slider:before {position: absolute;content: "";height: 24px;width: 24px;left: 4px;bottom: 3px;background-color: white;-webkit-transition: .4s;transition: .4s;border-radius: 50%;  }
+.switch .slider {position: absolute;cursor: pointer;top: 0;left: 0;right: 0;bottom: 0;background-color: #ccc;-webkit-transition: .4s;transition: .4s;border-radius: 35px;}
+.switch .slider:before {position: absolute;content: "";height: 14px;width: 14px;left: 4px;bottom: 3px;background-color: white;-webkit-transition: .4s;transition: .4s;border-radius: 50%;}
 .switch input:checked + .slider {background-color: #be417b;}
 .switch input:focus + .slider {box-shadow: 0 0 1px #be417b;}  
-.switch input:checked + .slider:before {-webkit-transform: translateX(26px);-ms-transform: translateX(26px);transform: translateX(26px);}
+.switch input:checked + .slider:before {-webkit-transform: translateX(26px);-ms-transform: translateX(26px);transform: translateX(17px);}
   
 
 .btn-set .btn {border:1px solid #ddd; border-radius: .3rem;width: 100%; text-align: center; margin: 1rem 0;}
@@ -274,6 +287,10 @@
 
 
 
+/* label switching */
+.label-switching.only {overflow: initial;}
+.label-switching.only .innerWrap {overflow: initial;}
+.label-switching.only .innerWrap .tit{ display: flex; justify-content: space-between; align-items: center;}
 
 
 

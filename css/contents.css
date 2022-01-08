@@ -211,7 +211,7 @@
 .gap {height: 1px; border-top: 1px dashed #ddd; margin: 1rem 0 1rem !important; }
 
 #contents .top-txt:first-child {padding-top:1rem; padding-bottom:1rem;}
-.top-txt {font-size: 1.4rem; line-height:1.4rem;}
+.top-txt {font-size: 1.6rem; line-height:1.8rem; font-weight: bold;}
 .top-txt b {display:block; padding:0.5rem 0 0 0; font-size: 2.5rem; line-height:2.5rem;}
 .account {background:#f5f5f5; color:#be417b; font-size: 1.8rem; font-weight: 700; text-align: center; margin: 2rem 0 2rem; padding: 2rem 0; border-radius: .5rem;}
 .phone-num {background:#f5f5f5; color:#111; font-size: 1.8rem; font-weight: 700; text-align: center; margin: 2rem 0 2rem; padding: 2rem 0; border-radius: .5rem;}
@@ -260,6 +260,17 @@
 .my-wrap .b-link {width: 26rem; padding-top: 2rem; display: flex;justify-content: space-between;align-items: center; margin:0 auto;}
 .my-wrap .b-link li> a { color:#111; font-size: 1.2rem; padding: 0 .2rem 0; border-bottom:1px solid rgba(149, 149, 149, .2);width: 100%;}
 
+
+
+/* 아코디언 */
+.accr-area {margin-top: 2rem; border-top:1px solid #ddd; padding-top:3rem}
+.accr-area .item > li {margin-bottom: 1rem}
+.accr-area .item > li .tit {display: flex; justify-content: space-between; align-items: center; font-size: 1.5rem; font-weight: bold; border:1px solid #ddd; padding: 1rem;}
+.accr-area .item > li .con  {height: 0; overflow: hidden; transition: height .3s ease-in; }
+.accr-area .item > li.active .con {/* height: auto; */}
+.accr-area .item > li .con dl {display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; padding: 1rem; box-sizing: border-box; }
+.accr-area .item > li .con dl dt {font-weight: bold; font-size: 1.3rem; color:#333; width: 70%; padding: .5rem; box-sizing: border-box; }
+.accr-area .item > li .con dl dd {font-weight: normal; font-size: 1.2rem; color:#888;  width: 30%; text-align: right; padding: .5rem; box-sizing: border-box;}
 
 
 

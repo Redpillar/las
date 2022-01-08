@@ -412,7 +412,7 @@ table caption,
 .check-box-wrap.txt-size-middle .check-box-label{font-size:1.8rem;} 
 .field .check-box-wrap{margin-top:1rem;}
 
-/* small */
+/* 체크박스 small */
 .check-box-wrap.small .icon{height:2rem;}
 .check-box-wrap.small .icon i{font-size:2rem;}
 .check-box-wrap.small .icon > .f{left:0.1rem; height:1.5rem;}
@@ -420,8 +420,16 @@ table caption,
 .check-box-wrap.small .icon > .f i{font-size:1.5rem;}
 .check-box-wrap.small .check-box-label{margin-top:0.2rem; padding-left:0.5rem; font-size:1.4rem; height:1.5rem;}
 
+/* 체크박스 wrap */
+.check-box-wrap.wrap{align-items:flex-start;}
+.check-box-wrap.wrap .check-box-label{height:auto; margin-top:0.2rem;}
+
+/* 체크박스 set */
 .check-set{padding:2rem 0 1rem 0;}
 .check-set .check-box-wrap.small + .check-box-wrap.small{margin-top:1rem;}
+.check-set .check-box-wrap + .check-box-wrap{margin-top:1rem;}
+
+
 
 
 /* button */

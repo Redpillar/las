@@ -166,29 +166,5 @@
 <script src="../js/jquery-3.4.1.min.js"></script>
 <script src="../js/swiper.min.js"></script>
 <script src="../js/common_ui.js"></script>
-
-<script>
-
-    const $accrBtn = $('.accr-area .item .tit');
-
-    $accrBtn.on('click', function(){
-            var scollHeight = ( $(this).next('.con').height() === 0 ) ? $(this).next('.con').prop("scrollHeight") : 0;
-            
-            $(this).next('.con').height(scollHeight);
-
-            if( scollHeight == 0 ) {
-                $(this).find('.fa').addClass("fa-plus")
-                $(this).find('.fa').removeClass("fa-minus")
-            }else{
-                $(this).find('.fa').addClass("fa-minus")
-                $(this).find('.fa').removeClass("fa-plus")
-            }
-
-    });
-
-   
-   
-</script>
-
 </body>
 </html>

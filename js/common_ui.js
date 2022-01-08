@@ -24,10 +24,30 @@
 			this._btn();
 			this._checkBox() // 체크박스
 			this._getVcBox() // 레이아웃 센터 정렬
+			this._accordionBox() // 아코디언 1
 
 			/* 플러그인 */
 			this.openPopup(); // 스와이프 셀렉트 팝업
 			this.topNavi(); // 스와이프 전체 텝매뉴
+		},
+		_accordionBox : function(){
+
+			const $accrBtn = $('.accr-area .item .tit');
+		
+			$accrBtn.on('click', function(){
+					var scollHeight = ( $(this).next('.con').height() === 0 ) ? $(this).next('.con').prop("scrollHeight") : 0;
+					
+					$(this).next('.con').height(scollHeight);
+		
+					if( scollHeight == 0 ) {
+						$(this).find('.fa').addClass("fa-plus")
+						$(this).find('.fa').removeClass("fa-minus")
+					}else{
+						$(this).find('.fa').addClass("fa-minus")
+						$(this).find('.fa').removeClass("fa-plus")
+					}
+		
+			});
 		},
 		_getVcBox : function(){
 			const that = this;

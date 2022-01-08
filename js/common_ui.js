@@ -44,24 +44,17 @@
 			let sum = null;
 			const fn = ()=>{
 				$box.each(function(i,n){
-					$(n).height("");
+					$(n).removeAttr("style")
 					const diff_footer = ($("footer").length)?$("footer").innerHeight() + Number($("footer").css("margin-top").match(/\d+/g)[0]):0;
-					const winH = $("body").innerHeight()
-					const minH = $("#wrap").innerHeight();
-					if(minH <= winH){
-						const $children = $(n).nextAll();
-						let diffH = 0;
-						$children.each(function(){
-							diffH += $(this).innerHeight();
-						});
-						const top = $(n).offset().top;
-						const lc = diff_footer + diffH + top;
-						h = "calc(100vh - "+ lc +"px)";
-						$(n).height(h).attr("min-size",true);
-					}else{
-						$(n).attr("min-size",false);
-						
-					}
+					const $children = $(n).nextAll();
+					let diffH = 0;
+					$children.each(function(){
+						diffH += $(this).innerHeight() + Number($(this).css("margin-top").match(/\d+/g)[0])+ Number($(this).css("margin-bottom").match(/\d+/g)[0]);
+					});
+					const top = $(n).offset().top;
+					const lc = diff_footer + diffH + top;
+					h = "calc(100vh - "+ lc +"px)";
+					$(n).css("min-height",h);
 				});
 			}
 			fn();

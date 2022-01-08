@@ -116,8 +116,9 @@ input[type='text']::placeholder{font-size:1.5rem; color:#bdbdbd}
 }
 
 /* input error txt */
-.error-txt {color:#e5005a; font-size:1.2rem; padding-left:.5rem;}
-.info-txt {color:#666; font-size:1.2rem; padding-left:.5rem;}
+.error-txt, .info-txt {font-size:1.2rem; padding-left:.5rem; line-height:1.4rem; margin:0.3rem 0 0;}
+.error-txt {color:#e5005a;}
+.info-txt {color:#666;}
 
 /* 이용약관 */
 .clause-list-box > ul > li + li{margin-top:3rem;}

@@ -468,9 +468,9 @@ table caption,
 
 /* font color */
 .fontColor1{color:#98222e}
-.fontColor2{color:#4ead5b}
-
+.fontColor2{color:#4ead5b}''
 /* a link */
+
 .alink-line{display:inline-block;text-decoration:underline; font-size: 1.3rem; color:#666}
 
 
@@ -546,6 +546,12 @@ table caption,
 /* both-txt-footerTop */
 .both-txt-footerTop{font-size:1.2rem; color:#be417b;}
 .vc-box[min-size=false] + .both-txt-footerTop{padding-top:4rem;}
+
+/* info txt */
+.info-txt{margin:1rem 0 0; font-size:1.2rem; line-height:1.4rem;}
+
+/* gab */
+.vc-box + .gap{margin-top:4rem;}
 
 
 /* 저해상도 대응 */

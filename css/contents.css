@@ -310,10 +310,10 @@
 
 
 /* 레이어 팝업 */
-.pop-layer {position: fixed; left:0; right:0; bottom:0; z-index: 110; height:0; overflow:hidden; border:1px solid red; transition: height .5s ease;}
+.pop-layer {position: fixed; left:0; right:0; bottom:0; z-index: 110; display:flex; align-items:flex-end; height:0; overflow:hidden; transition: height .5s ease;}
 .pop-layer.active {height:100%}
 .pop-layer.active::before {display: block;content:'';position: fixed;top:0;right:0;z-index: 0;bottom:0;left:0;background:rgba(0, 0, 0, .6);}
-.pop-layer .inner {height: 100%; position: relative;z-index: 100; background: #fff; border-radius: 1rem;}
+.pop-layer .inner {height: 100%; position: relative; z-index: 100; flex:1; height:calc(100% - 3rem); border-radius: 1rem; background: #fff;}
 .pop-layer .tit {position: relative; padding: 1.5rem; font-size: 1.6rem; font-weight: bold;}
 .pop-layer .tit .close {width: 4rem; height: 4rem; position:absolute; top:50%; right:.5rem; margin-top: -2rem; display: flex; align-items: center; justify-content: center;}
 .pop-layer .tit .close::before {content:''; display: block; width: 2.2rem; height:2.2rem; background:url(../images/close.png);}

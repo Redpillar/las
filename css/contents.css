@@ -301,8 +301,8 @@
 .accr-area.b .item > li .con {background-color: #fafafa;}
 .accr-area.b .item > li .con .q { padding: .7rem; font-size: 1.3rem}
 
-.accr-area .item > li .icon {position:relative; width:1.4rem; margin:0 1px 0 0px;}
-.accr-area .item > li .icon > .rec{position:absolute; width:1.5rem; height:0.2rem; background:#000; transform-origin:50% 50%;}
+.accr-area .item > li .icon {position:relative; width:1.4rem;}
+.accr-area .item > li .icon > .rec{position:absolute; width:1.4rem; height:0.2rem; background:#000; transform-origin:50% 50%;}
 .accr-area .item > li .icon > .rec:nth-child(2){opacity:0; transform:rotate(90deg); transform-origin:50%; transition:opacity 0.3s ease, transform 0.3s ease; opacity:1;}
 .accr-area .item > li.active .icon > .rec:nth-child(2){transform:rotate(0); opacity:0;}
 

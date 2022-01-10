@@ -60,7 +60,7 @@ input[type='text']::placeholder{font-size:1.5rem; color:#bdbdbd}
 
 
 .input-area .field .btn-wrap .btnDel {display:none;}
-.input-area .field .btn-wrap {position: absolute; bottom:1rem; right:1rem; }
+.input-area .field .btn-wrap {position: absolute; top:calc(50% - 0.1rem); right:1rem; transform:translateY(-50%);}
 .input-area .field .sum-wrap {position: absolute; bottom:1rem; right:1rem; }
 .input-area .field .sum-wrap strong {font-size:1.8rem; font-weight:700;}
 
@@ -137,13 +137,15 @@ input[type='text']::placeholder{font-size:1.5rem; color:#bdbdbd}
 .area-clause.full{height:auto; border:0; background:transparent;}
 
 /* 입력박스 */
-.input-box-line{position:relative; margin:1rem 0 0 0; border: 0.2rem solid #ddd; border-radius:0.3rem;}
-.input-box-line label{position:absolute;top:0;left:1rem;font-size: 1.4rem;font-weight: 500;padding:0 0.5rem;color: #111;transform:translateY(-50%);background:#fff;}
+.input-box-line{position:relative; margin:1rem 0 0 0; border: 0.2rem solid #ddd; border-radius:0.3rem; transition:border-color 0.3s ease;}
+.input-box-line label{position:absolute;top:50%;left:1rem;font-size: 1.4rem;font-weight: 400;padding:0 0.5rem;color: #bababa;transform:translateY(-50%); transition:top 0.3s ease, color 0.3s ease; background:#fff;}
 .input-box-line input{padding-left:1.5rem;}
 .input-box-line .btn-wrap {position: absolute; top:50%; right:1rem; display:none; transform:translateY(-50%);}
 .input-box-line.focus .btn-wrap {display:block;}
 .input-box-line .btn-wrap .btnDel {display:inline-block; width:2rem; height:2rem; background-position:-9.9rem  -6.9rem;}
 
+.input-box-line.active{border-color:#98222c;}
+.input-box-line.active label{top:0;left:1rem; font-weight: 500; color: #111;}
 
 
 /* 버튼  */

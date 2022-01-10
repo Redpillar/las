@@ -40,12 +40,14 @@
 					$(this).next('.con').height(scollHeight);
 		
 					if( scollHeight == 0 ) {
-						$(this).find('.fa').addClass("fa-plus")
-						$(this).find('.fa').removeClass("fa-minus")
+						$(this).find('.fa:not(.m)').addClass("fa-plus")
+						$(this).find('.fa:not(.m)').removeClass("fa-minus")
 					}else{
-						$(this).find('.fa').addClass("fa-minus")
-						$(this).find('.fa').removeClass("fa-plus")
+						$(this).find('.fa:not(.m)').addClass("fa-minus")
+						$(this).find('.fa:not(.m)').removeClass("fa-plus")
 					}
+
+					$(this).parents("li").toggleClass("active");
 		
 			});
 		},
@@ -240,16 +242,19 @@
 
 		},
 		_inputActive : function(){
-			var $wrap = $('.input-area');
+			var $wrap = $('.input-area, .input-box-line');
 			if(!$wrap.length)return;
 			
-			var $focus = $wrap.find('.input input'),
+			var $focus = $wrap.find('.input input:not([readonly])'),
 				$btnDel = $wrap.find('.btnDel'),
 				$inputFake = $wrap.find('.inputFake'),
 				$inputFake2 = $wrap.find('.inputFake button');
 			const $typeSwitching = $wrap.find('.icon-password');
 			const $lineBoxInput = $(".input-box-line input");
 			const $lineBoxBt = $(".input-box-line .btnDel");
+			const $tit = $(".label-switching.only");
+			const $onlyInput = $wrap.find('.only');
+			const $lineInput = $('.input-box-line');
 
 			$inputFake2.on('click', function(e){
 				var _this = $(this);
@@ -318,16 +323,25 @@
 			});
 			$focus.on('blur', function(){
 				var _this = $(this);
+				const $field = $(this).parents(".field");
 				console.log("_this.prev() : ",_this.prev());
 				_this.prev().animate({
 					position : 'absolute',
 					top : 0,
 					opacity : 1
 				});
+
 				
 				setTimeout(function(){
 					if(!_this.closest('.input-col2').find('.field').hasClass('on')){
 						_this.closest('.field').removeClass('on');
+					}
+					const len = _this.val().length;
+					console.log("len : ",len);
+					if(len > 0){
+						$field.addClass("checked");
+					}else{
+						$field.removeClass("checked");
 					}
 					
 				},50);
@@ -361,6 +375,46 @@
 				const $input = $(this).parents('.input-box-line').find("input");
 				$input.val('').focus();
 			});
+			$tit.on('click',function(){
+				const $input = $(this).parents('.field').addClass("on").find(".input input");
+				$input.focus();
+			});
+			$onlyInput.each(function(n,i){
+				const $field = $(i).parents('.field');
+				const input = $field.find(".input input");
+				const len = (input.val())?input.val().length:0;
+				input.removeAttr("data-text").removeAttr("placeholder");
+				if(len > 0){
+					$field.addClass("checked");
+				}else{
+					$field.removeClass("checked");
+				}
+			});
+			$lineInput.find('label').on('click',function(){
+				const _this = $(this);
+				const $warp = _this.parents('.input-box-line');
+				$wrap.addClass("active")
+			})
+			$lineInput.each(function(){
+				const _this = $(this);
+				const $warp = _this.parents('.input-box-line');
+				const length = _this.val().length;
+				if(length > 0){
+					$warp.addClass("active");
+				}else{
+					$warp.removeClass("active");
+				}
+				_this.find('input').on('focus',function(){
+					$wrap.addClass("active")
+				}).on("blur",function(){
+					const len = $(this).val().length;
+					if(len === 0){
+						$wrap.removeClass("active")
+					}
+				})
+			})
+			
+
 		
 		},
 		_selectAction : function(){

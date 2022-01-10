@@ -34,6 +34,7 @@
         /* .modify-list .modify strong {margin-left:20px; color:#ff7a0f} */
         /* .modify-list .modify strong {margin-left:20px; color:#f25872} */
         .color {background-color:#ffe49d}
+        .active{background:rgb(219, 219, 219);}
     </style>
     <script>
         $(function(){
@@ -101,7 +102,9 @@
             totalArea.find(".complete").children().text(complete); // 완료 체크된 페이지
             totalArea.find(".complete2").children().text(complete2); // 완료 체크된 페이지
             totalArea.find(".percent").children().text(percent); // 완료 체크된 페이지
-
+            $(".link").click(function(){
+                $(this).parents("tr").addClass("active").siblings().removeClass("active");
+            })
         })
     </script>
     

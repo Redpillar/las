@@ -310,7 +310,7 @@
 
 
 /* 레이어 팝업 */
-.pop-layer {position: fixed; left:0; right:0; bottom: -100%; z-index: 110; transition: bottom .5s;}
+.pop-layer {position: fixed; left:0; right:0; bottom: calc(-100% - env(safe-area-inset-bottom)); z-index: 110; transition: bottom .5s;}
 .pop-layer.active {bottom : 0}
 .pop-layer.active::before {display: block;content:'';position: fixed;top:0;right:0;z-index: 0;bottom:0;left:0;background:rgba(0, 0, 0, .6);}
 .pop-layer .inner {height: calc(100vh - 3rem);position: relative;z-index: 100; background: #fff; border-radius: 1rem;}

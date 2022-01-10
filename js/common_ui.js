@@ -69,13 +69,14 @@
 					$(n).removeAttr("style")
 					const diff_footer = ($("footer").length)?$("footer").innerHeight() + Number($("footer").css("margin-top").match(/\d+/g)[0]):0;
 					const $children = $(n).nextAll();
+					const winH = window.innerHeight;
 					let diffH = 0;
 					$children.each(function(){
 						diffH += $(this).innerHeight() + Number($(this).css("margin-top").match(/\d+/g)[0])+ Number($(this).css("margin-bottom").match(/\d+/g)[0]);
 					});
 					const top = $(n).offset().top;
 					const lc = diff_footer + diffH + top;
-					h = "calc(100vh - "+ lc +"px)";
+					h = "calc("+ winH +"px - "+ lc +"px)";
 					$(n).css("min-height",h);
 				});
 			}

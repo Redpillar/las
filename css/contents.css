@@ -226,6 +226,7 @@
 
 
 .gap {height: 1px;border-top: 1px dashed #ddd;margin: 1rem 0 1rem;}
+span.gap {display:block;}
 
 #contents .top-txt:first-child {padding-top:1rem; padding-bottom:1rem;}
 .top-txt {font-size: 1.5rem; line-height:1.8rem; }

@@ -124,15 +124,19 @@ input[type='text']::placeholder{font-size:1.5rem; color:#bdbdbd}
 
 /* 이용약관 */
 .clause-list-box > ul > li + li{margin-top:3rem;}
-.both-layout-box{/* padding:0 0 0 4.5rem; */}
+.both-layout-box{height:8rem;/* padding:0 0 0 4.5rem; */}
 .both-layout-box .alink-line{margin-bottom:0.8rem;}
-.area-clause{height:8rem;border:0.1rem solid #f2f2f2;overflow-y: scroll;background:#f9f9f9;}
-.area-clause .innerWrap{overflow-y: auto;height:calc(100% - 2.2rem); padding:1.1rem 1.5rem}
+.area-clause{position:relative; top:0; left:0; height:8rem; border:0.1rem solid #f2f2f2;overflow-y: scroll; background:#f9f9f9;}
+.area-clause .innerWrap{position:relative; top:0; left:0; right:0; height:calc(100% - 2.2rem); padding:1.1rem 1.5rem; overflow-y: auto; box-sizing:border-box; background:#f9f9f9;}
+.area-clause .innerWrap.ac{transition:all ease-in 0.3s;}
 .area-clause.full .innerWrap{padding:2.2rem 0;}
 .area-clause h1, .area-clause h2, .area-clause p{display:block; width:100%; height:auto; padding:0; margin:0;}
 .area-clause h1{padding:0 0 1.5rem 0; font-size:1.6rem; font-weight:bold;}
 .area-clause h2{padding:0 0 1rem 0;font-size: 1.4rem;font-weight:normal;}
 .area-clause p{font-size: 1.4rem;}
+
+.area-clause p + h2{margin-top:4rem;}
+.area-clause .gap{margin-top:5rem;}
 
 .area-clause.full{height:auto; border:0; background:transparent;}
 

@@ -25,10 +25,38 @@
 			this._checkBox() // 체크박스
 			this._getVcBox() // 레이아웃 센터 정렬
 			this._accordionBox() // 아코디언 1
+			this._textView(); // 이용약관
 
 			/* 플러그인 */
 			this.openPopup(); // 스와이프 셀렉트 팝업
 			this.topNavi(); // 스와이프 전체 텝매뉴
+		},
+		_textView : function(){
+			const $box = $('.clause-list-box > ul > li');
+			$box.each(function(n,i){
+				const $bt = $(i).find('.tit > .alink-line');
+				const $close = $(i).find('.area-clause .btn-set > .button-basic');
+				const $clause = $(i).find('.area-clause');
+				$(i).find('.area-clause > .innerWrap').addClass('ac');
+				$bt.on('click',function(){
+					const $clause = $(this).parents('li').find('.area-clause > .innerWrap');
+					const top = $clause.parent().offset().top * -1;
+					const left = ($clause.parent().offset().left + 1) * -1;
+					$('.area-clause > .innerWrap').removeAttr("style");
+					$clause.parent().css('overflow','visible').addClass('active').end().css({
+						position : 'absolute',
+						top : top + 'px',
+						left : left + 'px',
+						right : left + 'px',
+						zIndex : 100000,
+						height : '100vh',
+					})
+				})
+				$close.on('click',function(){
+					const $clause = $(this).parents('li').find('.area-clause > .innerWrap');
+					$clause.attr('style','z-index:100000');
+				})
+			})
 		},
 		_accordionBox : function(){
 
@@ -297,14 +325,9 @@
 			
 			});
 			$focus.on('focus', function(){
-				// 타이틀 플레이스홀더 매핑
-				var $placeholder = $(this).attr('data-text');
-				// console.log("txt : " + $placeholder);
-				if($placeholder !== undefined){
-					$(this).attr("placeholder", $placeholder).removeAttr("data-text");
-				};
-
-				var _this = $(this);
+				const _this = $(this);
+				const placeholderTxt = (_this.attr('placeholder'))?_this.attr('placeholder'):"";
+				_this.data('placeholder',placeholderTxt).removeAttr("placeholder");
 				_this.parent().parent().addClass('on').siblings().removeClass('on');
 				_this.parent().prev().animate({
 					position : 'absolute',
@@ -325,7 +348,6 @@
 			$focus.on('blur', function(){
 				var _this = $(this);
 				const $field = $(this).parents(".field");
-				console.log("_this.prev() : ",_this.prev());
 				_this.prev().animate({
 					position : 'absolute',
 					top : 0,
@@ -338,13 +360,14 @@
 						_this.closest('.field').removeClass('on');
 					}
 					const len = _this.val().length;
-					console.log("len : ",len);
+					const placeholderTxt = _this.data('placeholder');
 					if(len > 0){
 						$field.addClass("checked");
 					}else{
 						$field.removeClass("checked");
-					}
-					
+					};
+
+					_this.attr('placeholder',placeholderTxt);
 				},50);
 
 				// _this.closest('.input-col2').children('.input-area').find('.field').css({
@@ -359,7 +382,6 @@
 				const type = ($input.attr('type') === 'password')?'text':'password';
 				const addClass = (type === 'password')?true:false;
 				$input.attr('type',type);
-				console.log("add class : ",addClass)
 				if(addClass){
 					$(this).parents(".field").removeClass('txt');
 				}else{
@@ -394,21 +416,26 @@
 			$lineInput.find('label').on('click',function(){
 				const _this = $(this);
 				const $warp = _this.parents('.input-box-line');
-				$wrap.addClass("active")
+				$wrap.addClass("active").find("input").focus();
 			})
 			$lineInput.each(function(){
 				const _this = $(this);
 				const $warp = _this.parents('.input-box-line');
 				const length = _this.val().length;
+				const pl = (_this.attr("placeholder"))?_this.attr("placeholder"):'';
+				_this.data('placeholder',pl);
 				if(length > 0){
 					$warp.addClass("active");
 				}else{
 					$warp.removeClass("active");
 				}
 				_this.find('input').on('focus',function(){
-					$wrap.addClass("active")
+					const pl = $(this).data('placeholder');
+					$(this).attr('placeholder',pl)
+					$wrap.addClass("active");
 				}).on("blur",function(){
 					const len = $(this).val().length;
+					$(this).removeAttr('placeholder');
 					if(len === 0){
 						$wrap.removeClass("active")
 					}

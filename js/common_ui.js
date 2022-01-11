@@ -43,7 +43,7 @@
 					const top = $clause.parent().offset().top * -1;
 					const left = ($clause.parent().offset().left + 1) * -1;
 					$('.area-clause > .innerWrap').removeAttr("style");
-					$clause.parent().css('overflow','visible').addClass('active').end().css({
+					$clause.parent().addClass('active').end().css({
 						position : 'absolute',
 						top : top + 'px',
 						left : left + 'px',
@@ -54,7 +54,7 @@
 				})
 				$close.on('click',function(){
 					const $clause = $(this).parents('li').find('.area-clause > .innerWrap');
-					$clause.attr('style','z-index:100000');
+					$clause.attr('style','z-index:100000').parent().removeClass('active');
 				})
 			})
 		},

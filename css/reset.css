@@ -109,7 +109,27 @@ select::-moz-focus-inner {
   outline: none;
 }
 
+/* 텍스트 블라인드 */
+table caption,
+.blind{overflow:hidden; position: absolute; top:0; left:auto; width:1px; height:1px; padding:0; border:0; clip: rect(0,0,0,0);}
 
+/* 접근성 */
+.accessibility {width: 100%; line-height: 0; font-size: 0; overflow: hidden;}
+
+/* 공통 */
+.txt-l {text-align: left !important}
+.txt-c {text-align: center !important}
+.txt-r {text-align: right !important}
+
+.through {text-decoration:line-through !important}
+
+/* center box */
+.vc-box{display:flex; box-sizing:border-box;}
+.vc-box > .inner-wrap{flex:1;}
+.vc-box.vc{align-items:center;}
+
+/* 텍스트 박스 */
+.textarea {width:100%; resize: none; border:1px solid #ccc; background-color:#fff; font-size:1.4rem; padding:2rem 1.5rem; box-sizing:border-box; height:15rem}
 
 /* margin-top */
 .mt0 {margin-top: 0px !important;}

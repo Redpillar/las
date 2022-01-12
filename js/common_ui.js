@@ -274,7 +274,7 @@
 			var $wrap = $('.input-area, .input-box-line');
 			if(!$wrap.length)return;
 			
-			var $focus = $wrap.find('.input input:not([readonly])'),
+			var $focus = $wrap.find('.input input'),
 				$btnDel = $wrap.find('.btnDel'),
 				$inputFake = $wrap.find('.inputFake'),
 				$inputFake2 = $wrap.find('.inputFake button');
@@ -284,6 +284,7 @@
 			const $tit = $(".label-switching.only");
 			const $onlyInput = $wrap.find('.only');
 			const $lineInput = $('.input-box-line');
+			const $enterNone = $wrap.find('.input input[readonly], .input input[disabled]');
 
 			$inputFake2.on('click', function(e){
 				var _this = $(this);
@@ -327,8 +328,12 @@
 			$focus.on('focus', function(){
 				const _this = $(this);
 				const placeholderTxt = (_this.attr('placeholder'))?_this.attr('placeholder'):"";
-				_this.data('placeholder',placeholderTxt).removeAttr("placeholder");
-				_this.parent().parent().addClass('on').siblings().removeClass('on');
+				const check = (_this.attr('readonly'))?true:false;
+				_this.data('val',_this.val());
+				if(check) return;
+				if(!_this.data('placeholder')) _this.data('placeholder',placeholderTxt);
+				_this.removeAttr("placeholder");
+				_this.parent().parent().addClass('on').addClass('del-on').siblings().removeClass('on').removeClass('del-on');
 				_this.parent().prev().animate({
 					position : 'absolute',
 					top : 0,
@@ -341,9 +346,11 @@
 				}else {
 					_this.next().children().hide(100);
 				}
-				$btnDel.on('click', function(){
-					$(this).parents(".input").find("input").val('');
-				});
+			});
+			$btnDel.on('click', function(){
+				const $field = $(this).parents(".field");
+				$(this).parents(".input").find("input").val('');
+				$field.removeClass("checked").removeClass("error");
 			});
 			$focus.on('blur', function(){
 				var _this = $(this);
@@ -354,21 +361,24 @@
 					opacity : 1
 				});
 
-				
-				setTimeout(function(){
-					if(!_this.closest('.input-col2').find('.field').hasClass('on')){
-						_this.closest('.field').removeClass('on');
-					}
-					const len = _this.val().length;
-					const placeholderTxt = _this.data('placeholder');
-					if(len > 0){
-						$field.addClass("checked");
-					}else{
-						$field.removeClass("checked");
-					};
+				if(!_this.closest('.input-col2').find('.field').hasClass('on')){
+					_this.closest('.field').removeClass('on');
+				}
+				const len = _this.val().length;
+				const placeholderTxt = _this.data('placeholder');
+				let timer = 0;
+				if(len > 0){
+					$field.addClass("checked");
+					timer = 200;
+				}else{
+					$field.removeClass("checked");
+				};
 
-					_this.attr('placeholder',placeholderTxt);
-				},50);
+				_this.attr('placeholder',placeholderTxt);
+				
+				setTimeout(()=>{
+					$field.removeClass("del-on");
+				},timer);
 
 				// _this.closest('.input-col2').children('.input-area').find('.field').css({
 				// 	'border-bottom' : '1px solid #000'
@@ -377,6 +387,13 @@
 				
 				// },50);
 			});
+			$focus.on('keyup', function(){
+				const _this = $(this);
+				const data_val = _this.data('val');
+				const $field = $(this).parents('.field');
+				if(!$field.hasClass('error')) return;
+				if(data_val !== _this.val()) $field.removeClass('error');
+			})
 			$typeSwitching.on('click', function(){
 				const $input = $(this).parents(".input").find("input");
 				const type = ($input.attr('type') === 'password')?'text':'password';
@@ -440,9 +457,7 @@
 						$wrap.removeClass("active")
 					}
 				})
-			})
-			
-
+			});
 		
 		},
 		_selectAction : function(){

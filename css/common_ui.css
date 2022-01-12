@@ -74,7 +74,7 @@ input[type='text']::placeholder{font-size:1.5rem; color:#bdbdbd}
 
 /* field icon */
 .input-area .field .icon-password{position:absolute; top:50%; right:0; display:none; transform:translateY(-50%);}
-.input-area .field.on .icon-password{display:block;}
+.input-area .field.del-on .icon-password{display:block;}
 .input-area .field .icon-password i{font-size:3rem;}
 .input-area .field .icon-password span{position:absolute; top:50%; left:50%; display:block !important; width:120%; height:1px; transform:rotate(45deg) translate(-50%,-50%); transform-origin:0 0; background:#000;}
 .input-area .field.txt .icon-password span{display:none !important;}

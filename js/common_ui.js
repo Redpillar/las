@@ -366,10 +366,9 @@
 				}
 				const len = _this.val().length;
 				const placeholderTxt = _this.data('placeholder');
-				let timer = 0;
+				let timer = 200;
 				if(len > 0){
 					$field.addClass("checked");
-					timer = 200;
 				}else{
 					$field.removeClass("checked");
 				};

@@ -351,7 +351,7 @@ input[type='text']::placeholder{font-size:1.5rem; color:#bdbdbd}
 .check-box-wrap .check-box-label{display:flex;justify-content: space-between;align-items:center;width:calc(100% - 40px);height:4rem;padding: 0rem 0 0 1rem;font-size: 1.6rem; line-height:1.8rem; color:#000;vertical-align:top;letter-spacing: -.15rem;font-weight: 500;box-sizing:border-box;}
 
 .check-box-wrap.fill .icon{transition:none;}
-.check-box-wrap.fill .fill{position:absolute;top:0;left:0;width:4rem;height:100%;overflow:hidden;opacity:0;transition:opacity ease 0.3s;}
+.check-box-wrap.fill .fill{position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden;opacity:0;transition:opacity ease 0.3s;}
 .check-box-wrap.fill .fill i{color:#98222e;}
 .check-box-wrap.fill .f i{color:#fff; opacity:0; transition:none;}
 .check-box-wrap.fill.checked .b{color:#bfbfbf;}
@@ -406,7 +406,7 @@ input[type='text']::placeholder{font-size:1.5rem; color:#bdbdbd}
 .label-switching.only .explain{display:none;}
 
 .label-switching.l2{z-index:2; overflow:visible;}
-.label-switching .innerWrap{position:relative;z-index: 1;height:2rem;overflow:hidden;transition:height ease 0.5s;}
+.label-switching .innerWrap{position:relative; z-index:1; display:block; height:2rem;overflow:hidden;transition:height ease 0.5s;}
 .label-switching .innerWrap .explain{height:auto; line-height:1.6rem;}
 
 .field.on .label-switching.l2 .innerWrap{height:4rem; top:-1rem;}

@@ -35,8 +35,6 @@
 			const $box = $('.clause-list-box > ul > li');
 			$box.each(function(n,i){
 				const $bt = $(i).find('.tit > .alink-line');
-				const $close = $(i).find('.area-clause .btn-set > .button-basic');
-				const $clause = $(i).find('.area-clause');
 				$(i).find('.area-clause > .innerWrap').addClass('ac');
 				$bt.on('click',function(){
 					const $clause = $(this).parents('li').find('.area-clause > .innerWrap');
@@ -95,15 +93,16 @@
 			const fn = ()=>{
 				$box.each(function(i,n){
 					$(n).removeAttr("style")
-					const diff_footer = ($("footer").length)?$("footer").innerHeight() + Number($("footer").css("margin-top").match(/\d+/g)[0]):0;
+					const diff_footer = ($("footer").length)?$("footer").innerHeight() + Number($("footer").css("margin-top").match(/\d+/g)[0]) + Number($("footer").css("margin-bottom").match(/\d+/g)[0]):0;
 					const $children = $(n).nextAll();
 					const winH = window.innerHeight;
+					const content_price = Number($("#contents").css("margin-bottom").match(/\d+(\.\d+)?/g)[0]) + Number($("#contents").css("padding-bottom").match(/\d+(\.\d+)?/g)[0])
 					let diffH = 0;
 					$children.each(function(){
 						diffH += $(this).innerHeight() + Number($(this).css("margin-top").match(/\d+/g)[0])+ Number($(this).css("margin-bottom").match(/\d+/g)[0]);
 					});
 					const top = $(n).offset().top;
-					const lc = diff_footer + diffH + top;
+					const lc = diff_footer + diffH + top + content_price;
 					h = "calc("+ winH +"px - "+ lc +"px)";
 					$(n).css("min-height",h);
 				});

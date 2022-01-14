@@ -406,7 +406,8 @@ input[type='text']::placeholder{font-size:1.5rem; color:#bdbdbd}
 .label-switching.only .explain{display:none;}
 
 .label-switching.l2{z-index:2; overflow:visible;}
-.label-switching .innerWrap{position:relative; z-index:1; display:block; height:2rem;overflow:hidden;transition:height ease 0.5s;}
+.label-switching .innerWrap{position:relative; z-index:1; height:2rem;overflow:hidden;transition:height ease 0.5s;}
+.label-switching label.innerWrap{display:block; width:100%;}
 .label-switching .innerWrap .explain{height:auto; line-height:1.6rem;}
 
 .field.on .label-switching.l2 .innerWrap{height:4rem; top:-1rem;}

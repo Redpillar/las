@@ -19,7 +19,7 @@
 /*input text type*/
 input[type="password"],
 input[type="search"],
-input[type="text"]{outline:none;border:0;color:#000;/* font-size:1.8rem; */padding: 1.3rem 5rem 1.3rem .5rem;box-sizing:border-box;width:100%;height:100%;font-weight: 100;}
+input[type="text"]{outline:none;border:0;color:#000;/* font-size:1.8rem; */padding: 1.3rem 2.5rem 1.3rem 0rem;box-sizing:border-box;width:100%;height:100%;font-weight: 100;}
 input:disabled {/*background-color:#f0f0f0; color:#707070;*/}
 
 /* 플레이스 홀더 */
@@ -35,7 +35,7 @@ input[type='text']::placeholder{font-size:1.5rem; color:#bdbdbd}
 #contents > .input-area:first-child .field {padding-top:0;}
 .input-area .field {position: relative; width:100%; min-height:9.6rem; padding-top:2.6rem; text-align:left; box-sizing: border-box;}
 .input-area .field .input {height: 4.4rem;position: relative;border-bottom:1px solid #ddd;position: relative;}
-.input-area .field .input input[type="text"] {padding: 1.3rem 4rem 1.3rem 0rem;}
+.input-area .field .input input[type="text"] {padding: 1.3rem 2.5rem 1.3rem 0rem;}
 .input-area .field .input input[type="text"].money {text-align:right; font-weight:700;}
 .input-area .field .input.space input[type="text"] {padding:1.3rem 12rem 1.3rem .5rem;}
 .input-area .field .input.space2 input[type="text"] {padding:1.3rem 15rem 1.3rem .5rem;}
@@ -60,7 +60,7 @@ input[type='text']::placeholder{font-size:1.5rem; color:#bdbdbd}
 
 
 .input-area .field .btn-wrap .btnDel {display:none;}
-.input-area .field .btn-wrap {position: absolute; top:calc(50% - 0.1rem); right:1rem; transform:translateY(-50%);}
+.input-area .field .btn-wrap {position: absolute; top:calc(50% - 0.1rem); right:0; transform:translateY(-50%);}
 .input-area .field .sum-wrap {position: absolute; bottom:1rem; right:1rem; }
 .input-area .field .sum-wrap strong {font-size:1.8rem; font-weight:700;}
 
@@ -73,13 +73,13 @@ input[type='text']::placeholder{font-size:1.5rem; color:#bdbdbd}
 .input-area .field.minSize-none {min-height:auto; margin:1.3rem 0; padding-top:0;}
 
 /* field icon */
-.input-area .field .icon-password{position:absolute; top:50%; right:0; display:none; transform:translateY(-50%);}
+.input-area .field .icon-password{position:absolute; top:50%; right:0; display:none; font-size:1.6rem; transform:translateY(-50%) scale(0.8);}
 .input-area .field.del-on .icon-password{display:block;}
 .input-area .field .icon-password i{font-size:3rem;}
 .input-area .field .icon-password span{position:absolute; top:50%; left:50%; display:block !important; width:120%; height:1px; transform:rotate(45deg) translate(-50%,-50%); transform-origin:0 0; background:#000;}
 .input-area .field.txt .icon-password span{display:none !important;}
-.input-area .field .pw .btn-wrap {right:4rem;}
-.input-area .field .pw input[type='password']{/* padding-right:7rem; */font-size: 1.5rem;}
+.input-area .field .pw .btn-wrap {right:3.1rem;}
+.input-area .field .pw input[type='password']{padding-right:5.5rem; font-size: 1.5rem;}
 
 
 /* 인풋 에러 영역 */

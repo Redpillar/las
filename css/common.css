@@ -3,8 +3,8 @@
 @import url(common_ui.css); /* 폰트 */
 @import url(contents.css); /* 작업 후 정리 */
 @import url(contents02.css); /* 작업 후 정리 */
-@import url(importFont.css); /* 폰트 */
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css); /* 웹폰트 아콘 */
+@import url(importFont.css); /* 폰트 */ /* 웹폰트 아콘 */
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
 
 html {-webkit-font-smoothing: antialiased;}
 html,body {font-size:62.5%; min-height: 100%; height: 100%;} 
@@ -122,12 +122,12 @@ body.on::after {display:block; content:""; width:100%; height:100%; position:fix
 /* footer */
 
 footer {padding:2rem; background: #3c3c3c;}
-footer .terms {display: flex; justify-content: space-between; align-items: center;}
+footer .terms {display: flex; justify-content: space-between; align-items: center; max-width:68rem; margin:0 auto;}
 footer .terms >li {display: flex; justify-content: space-between; align-items: center; width: 100%;}
 footer .terms >li:first-of-type::before  {display: none;}
 footer .terms >li::before {display: block; content: ''; width: 1px; height: 1rem; background: rgba(149, 149, 149, .3);}
 footer .terms >li > a {font-size:1.2rem; color:#959595; width: 100%; text-align: center;}
-footer .copy {padding-top: 1.2rem; margin-top: 1rem; font-size:1.2rem; color:#959595; border-top: 1px dashed rgba(149, 149, 149, .2)}
+footer .copy {max-width:68rem; padding-top: 1.2rem; margin: 1rem auto 0; font-size:1.2rem; color:#959595; text-align:center; border-top: 1px dashed rgba(149, 149, 149, .2)}
 
 
 /* 로딩 */
@@ -173,9 +173,10 @@ footer .copy {padding-top: 1.2rem; margin-top: 1rem; font-size:1.2rem; color:#95
 /* Layout */
 #header {position:fixed;top:0;left:0;width:100%;padding: 1.5rem 0;text-align:center;z-index:100;color:#fff;background:linear-gradient(135deg, #98222c, #be417b);box-sizing: border-box;}
 
-#header > .arr{position:absolute; top:0; left:0; display:flex; align-items:center; justify-content:center; width:5rem; height:100%;}
-#header > .arr i{font-size:3.5rem;margin-top: -5px;}
-#header > h1{font-size:1.8rem;font-weight:bold;}
+#header .arr{position:absolute; top:0; left:0; display:flex; align-items:center; justify-content:center; width:5rem; height:100%;}
+#header .arr i{font-size:3.5rem;margin-top: -5px;}
+#header h1{font-size:1.8rem;font-weight:bold;}
+#header .inner-wrap{position:relative; display:block; margin:0 auto; max-width:68rem;}
 
 #header .navigator {position: relative; background-color:#fff}
 #header .navigator button {position:absolute; top:0; width:4.4rem; height:4.4rem;}
@@ -194,7 +195,7 @@ footer .copy {padding-top: 1.2rem; margin-top: 1rem; font-size:1.2rem; color:#95
 
 
 #container {width:100%;/* height:100%; */min-height:calc(100vh - 15.3rem);background:#fff;box-sizing:border-box;}
-#contents {width:100%; max-width:68rem;/* height:100%; */ margin:0 auto; padding: 7rem 2.5rem 2.5rem; box-sizing:border-box;}
+#contents {width:100%; max-width:68rem;/* height:100%; */ min-height:calc(100vh - 10.3rem); margin:0 auto; padding: 7rem 2.5rem 2.5rem; box-sizing:border-box;}
 #contents.t2 {padding-top:5rem;}
 
 /* Text */
@@ -369,9 +370,6 @@ footer .copy {padding-top: 1.2rem; margin-top: 1rem; font-size:1.2rem; color:#95
 .sns-txt .sns.facebook {background-color: #475993; }
 .sns-txt i {margin-right: 1rem; margin:0 auto 1rem; }
 
-/* field icon */
-.input-area .field .icon-password{position:absolute; top:calc(50% - 0.2rem); right:0; transform:translateY(-50%);}
-
 /* sns-txt */
 .step-wrap + .sns-txt{margin-top:2.5rem;}
 /* top-txt */
@@ -396,7 +394,7 @@ footer .copy {padding-top: 1.2rem; margin-top: 1rem; font-size:1.2rem; color:#95
 .login-box.min{height:calc(100vh - 15.3rem);}
 .login-box .head{height:25rem; display:flex; align-items:center; justify-content:flex-start; flex-wrap:wrap; padding:0 3.5rem; font-size:2.2rem; line-height:2.5rem; color:#fff; font-weight:bold; background:linear-gradient(135deg, #98222c, #be417b);box-sizing: border-box;}
 .login-box .head .big{font-size:3.7rem; line-height:4rem;}
-.login-box .head div{width:100%; font-size:inherit; line-height:inherit;}
+.login-box .head div{width:100%; max-width:68rem; margin:0 auto; font-size:inherit; line-height:inherit; box-sizing:border-box;}
 .login-box .con{display:flex; align-items:center; justify-content:center;}
 .login-box .con > .innerWrap{margin-top:2.5rem;}
 .login-box .con[min-size=false]{margin-top:6rem; margin-bottom:2rem;}
@@ -510,8 +508,10 @@ footer .copy {padding-top: 1.2rem; margin-top: 1rem; font-size:1.2rem; color:#95
 .phone-num i.sns{position:relative; top:-0.2rem; display:inline-block; vertical-align:middle; margin:0 0.5rem 0 0;}
 
 /* 마이페이지 */
-.my-wrap .my-main {padding: 2rem 2rem 7rem; background: linear-gradient(135deg, #9e6cdb, #c462b5, #f75584);position: relative;margin: 0 -2.5rem 4.5rem !important; }
-.my-wrap .my-main .name {margin-bottom: .5rem; font-size: 1.5rem; line-height: 2.9rem; color:#fff;}
+.my-wrap .my-main {padding: 0rem 2rem 7rem; /*background: linear-gradient(135deg, #9e6cdb, #c462b5, #f75584);*/position: relative;margin: 0 -2.5rem 4.5rem !important; }
+.my-wrap .my-main .bg{position:fixed; left:0; z-index:0; width:100vw; height: 25rem; background: linear-gradient(135deg, #9e6cdb, #c462b5, #f75584);}
+.my-wrap .my-main > *:not(.bg){position:relative; z-index:1;}
+.my-wrap .my-main .name {margin-bottom: .5rem; padding-top:2rem; font-size: 1.5rem; line-height: 2.9rem; color:#fff;}
 .my-wrap .my-main .link > li {display: inline-block; color:#fff; margin-right: 1rem;}
 .my-wrap .my-main .link > li a{font-size: 1.2rem; line-height:1.6rem; color: rgba(255, 255, 255, .5); text-decoration: underline;}
 .my-wrap .my-main .link > li a i {margin-left: .4rem}
@@ -531,7 +531,7 @@ footer .copy {padding-top: 1.2rem; margin-top: 1rem; font-size:1.2rem; color:#95
 
 /* shpping */
 .shopping-box{position:relative;}
-.shopping-box:before{content:""; position:absolute; top:0; left:-2.5rem; right:-2.5rem; height:0.7rem; background:#e7e6e6;}
+.shopping-box:before{content:""; position:fixed; left:0; width:100vw; height:0.7rem; background:#e7e6e6;}
 .shopping-box h1{margin:2rem 0 0 0; padding:3rem 0 1.5rem; font-size:1.6rem; color:#000; text-align:center;}
 .shopping-box .list-box{width:calc(100% - 1rem); margin:0 auto; padding:1rem; border:1px solid #ededed; box-shadow:0.2rem 0.2rem 0.4rem rgba(0,0,0,0.2)}
 .shopping-box .list-box .head{display:flex; justify-content:space-between; padding:0 0 0.5rem 0; border-bottom:1px solid #ededed}

@@ -123,6 +123,8 @@ table caption,
 
 .through {text-decoration:line-through !important}
 
+.overflow-h{overflow:hidden !important;}
+
 /* center box */
 .vc-box{display:flex; box-sizing:border-box;}
 .vc-box > .inner-wrap{flex:1;}

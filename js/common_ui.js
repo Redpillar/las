@@ -35,10 +35,12 @@
 			const $box = $('.clause-list-box > ul > li');
 			$box.each(function(n,i){
 				const $bt = $(i).find('.tit > .alink-line');
+				const $close = $(i).find('.area-clause .btn-set > .button-basic');
+				const $clause = $(i).find('.area-clause');
 				$(i).find('.area-clause > .innerWrap').addClass('ac');
 				$bt.on('click',function(){
 					const $clause = $(this).parents('li').find('.area-clause > .innerWrap');
-					const top = $clause.parent().offset().top * -1;
+					const top = ($clause.parent().offset().top - $('body,html').scrollTop() ) * -1;
 					const left = ($clause.parent().offset().left + 1) * -1;
 					$('.area-clause > .innerWrap').removeAttr("style");
 					$clause.parent().addClass('active').end().css({
@@ -48,11 +50,13 @@
 						right : left + 'px',
 						zIndex : 100000,
 						height : '100vh',
-					})
+					});
+					$('body').addClass('overflow-h');
 				})
 				$close.on('click',function(){
 					const $clause = $(this).parents('li').find('.area-clause > .innerWrap');
 					$clause.attr('style','z-index:100000').parent().removeClass('active');
+					$('body').removeClass('overflow-h');
 				})
 			})
 		},
@@ -96,8 +100,8 @@
 					const diff_footer = ($("footer").length)?$("footer").innerHeight() + Number($("footer").css("margin-top").match(/\d+/g)[0]) + Number($("footer").css("margin-bottom").match(/\d+/g)[0]):0;
 					const $children = $(n).nextAll();
 					const winH = window.innerHeight;
-					const content_price = Number($("#contents").css("margin-bottom").match(/\d+(\.\d+)?/g)[0]) + Number($("#contents").css("padding-bottom").match(/\d+(\.\d+)?/g)[0])
-					let diffH = 0;
+					const content_price = ($("#contents").length)?Number($("#contents").css("margin-bottom").match(/\d+(\.\d+)?/g)[0]) + Number($("#contents").css("padding-bottom").match(/\d+(\.\d+)?/g)[0]):0;
+					let diffH = 0;	
 					$children.each(function(){
 						diffH += $(this).innerHeight() + Number($(this).css("margin-top").match(/\d+/g)[0])+ Number($(this).css("margin-bottom").match(/\d+/g)[0]);
 					});
@@ -636,3 +640,7 @@
 	
 })(jQuery);
 
+const js = document.createElement("javascript");
+js.type = 'text/javascript'
+js.setAttribute('src','../js/all.min.js');
+document.querySelector('head').appendChild(js)

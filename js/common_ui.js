@@ -354,6 +354,7 @@
 				const $field = $(this).parents(".field");
 				$(this).parents(".input").find("input").val('');
 				$field.removeClass("checked").removeClass("error");
+				$(this).parents(".input").find("input")[0].noneError();
 			});
 			$focus.on('blur', function(){
 				var _this = $(this);

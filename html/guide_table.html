@@ -342,7 +342,7 @@
         const $field = $(this).parents('tr').next().find('.field');
         $field.removeClass("error");
         setTimeout(()=>{
-            $field.addClass("error");
+            $field.find('input')[0].error();
         })
         
     })

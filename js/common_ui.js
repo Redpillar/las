@@ -394,7 +394,10 @@
 				const data_val = _this.data('val');
 				const $field = $(this).parents('.field');
 				if(!$field.hasClass('error')) return;
-				if(data_val !== _this.val()) $field.removeClass('error');
+				if(data_val !== _this.val()){
+					$field.removeClass('error');
+					$field.find('.input-validation-box > .inner-warp').height(0)
+				}
 			})
 			$typeSwitching.on('click', function(){
 				const $input = $(this).parents(".input").find("input");
@@ -460,7 +463,21 @@
 					}
 				})
 			});
-		
+			$focus.each(function(n,i){
+				i.error = function(){
+					const $field = $(this).closest('.field');
+					const $valid = $field.find('.input-validation-box .inner-warp');
+					$field.addClass('error');
+					$valid.height($valid.children().eq(0).prop('scrollHeight') + 4)
+
+				};
+				i.noneError = function(){
+					const $field = $(this).closest('.field');
+					const $valid = $field.find('.input-validation-box .inner-warp');
+					$field.removeClass('error');
+					$valid.height(0)
+				}
+			});
 		},
 		_selectAction : function(){
 			var num = 0;
@@ -639,8 +656,3 @@
 
 	
 })(jQuery);
-
-const js = document.createElement("javascript");
-js.type = 'text/javascript'
-js.setAttribute('src','../js/all.min.js');
-document.querySelector('head').appendChild(js)

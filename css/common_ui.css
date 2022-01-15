@@ -138,6 +138,7 @@ input[type='text']::placeholder{font-size:1.5rem; color:#bdbdbd}
 .field.error .input-validation-box > .inner-warp{height:1.8rem;}
 .field.error .label-switching .tit{color:#e5005a;}
 .field.error .input input[type='text']{color:#e5005a;}
+.field.error .label-switching.only .tit, .field.error.checked .label-switching.only .tit, .field.error.on .label-switching.only .tit, .field.error.on.checked .label-switching.only .tit{color:#e5005a;}
 
 .field.error{animation:error 0.3s ease-in-out forwards;}
 

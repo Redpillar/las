@@ -126,7 +126,7 @@ footer .terms {display: flex; justify-content: space-between; align-items: cente
 footer .terms >li {display: flex; justify-content: space-between; align-items: center; width: 100%;}
 footer .terms >li:first-of-type::before  {display: none;}
 footer .terms >li::before {display: block; content: ''; width: 1px; height: 1rem; background: rgba(149, 149, 149, .3);}
-footer .terms >li > a {font-size:1.2rem; color:#959595; width: 100%; text-align: center;}
+footer .terms >li > a {font-size:1.2rem; font-weight:bold; color:#959595; width: 100%; text-align: center;}
 footer .copy {max-width:68rem; padding-top: 1.2rem; margin: 1rem auto 0; font-size:1.2rem; color:#959595; text-align:center; border-top: 1px dashed rgba(149, 149, 149, .2)}
 
 

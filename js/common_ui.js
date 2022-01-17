@@ -109,6 +109,8 @@
 					const lc = diff_footer + diffH + top + content_price;
 					h = "calc("+ winH +"px - "+ lc +"px)";
 					$(n).css("min-height",h);
+					const html = "winH : "+winH+" : " + document.body.clientHeight;
+					$(".vc-box > .inner-wrap").append(html)
 				});
 			}
 			fn();

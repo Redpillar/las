@@ -51,12 +51,12 @@
 						zIndex : 100000,
 						height : '100vh',
 					});
-					$('body').addClass('overflow-h');
+					$('body, #wrap').addClass('overflow-h');
 				})
 				$close.on('click',function(){
 					const $clause = $(this).parents('li').find('.area-clause > .innerWrap');
-					$clause.attr('style','z-index:100000').parent().removeClass('active');
-					$('body').removeClass('overflow-h');
+					$clause.attr('style','z-index:0').parent().removeClass('active');
+					$('body, #wrap').removeClass('overflow-h');
 				})
 			})
 		},

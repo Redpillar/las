@@ -351,6 +351,8 @@
 				}
 			});
 			$btnDel.on('click', function(){
+				const check = ($(this).parents('.input-box-line').length > 0)?$(this).parents('.input-box-line'):false;
+				if(check) return;
 				const $field = $(this).parents(".field");
 				$(this).parents(".input").find("input").val('');
 				$field.removeClass("checked").removeClass("error");
@@ -413,13 +415,18 @@
 
 			});
 			$lineBoxInput.on('focus',function(){
-				$(this).parents('.input-box-line').addClass("focus");
+				$(this).parents('.input-box-line').addClass("active focus");
 			}).on('blur',function(){
-				$(this).parents('.input-box-line').removeClass("focus");
+				console.log(1111)
+				$(this).parents('.input-box-line');
+				setTimeout(()=>{
+					console.log(222)
+					$(this).parents('.input-box-line').removeClass("active focus");
+				})
 			})
-			$lineBoxBt.on('mouseenter',function(){
+			$lineBoxBt.on('click',function(){
 				const $input = $(this).parents('.input-box-line').find("input");
-				$input.val('').focus();
+				$input.val('');
 			});
 			$tit.on('click',function(){
 				const $input = $(this).parents('.field').addClass("on").find(".input input");

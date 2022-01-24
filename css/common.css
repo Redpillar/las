@@ -53,10 +53,10 @@ input[type="text"]:-ms-input-placeholder {/* Internet Explorer 10+ */color:#999;
 .btn-set .button-basic {display: block; width: 100%;}
 .btn-set .button-basic + .button-basic {margin-left: 1rem}
 
-.button-basic{display:inline-block; padding:1rem 3rem 1rem; font-size:1.5rem; line-height:1.7rem; font-weight:500; color:#fff; border-radius:3rem; transition:opacity 0.3s ease-in; background:linear-gradient(135deg, #98222c, #be417b);/*background:#d9d9d9;*/}
+.button-basic{display:inline-block; padding:1rem 3rem 1rem; font-size:1.5rem; line-height:1.7rem; font-weight:500; color:#fff; border-radius:3rem; transition:opacity 0.3s ease-in; background:#222;/*background:linear-gradient(135deg, #98222c, #be417b);background:#d9d9d9;*/}
 .button-basic.small{padding:0.4rem 2.4rem; font-size:1.2rem; line-height:1.4rem;}
 .button-basic.on{color:#fff; background:linear-gradient(135deg, #98222c, #be417b);}
-.button-basic.outline{padding:0.8rem 2.8rem; color:#971d37; border:2px solid #971d37; background:transparent;}
+.button-basic.outline{padding:0.8rem 2.8rem; color:#222;/*color:#971d37;*/ border:2px solid #222;/*border:2px solid #971d37;*/ background:transparent;}
 .button-basic.outline.small{padding:0.2rem 2.2rem;}
 .button-basic.outline.gray{color:#585858; border-color:#dbdbdb;}
 
@@ -398,8 +398,8 @@ footer .copy {max-width:68rem; padding-top: 1.2rem; margin: 1rem auto 0; font-si
 
 /* login */
 .login-box.min{height:calc(100vh - 15.3rem);}
-.login-box .head{height:25rem; display:flex; align-items:center; justify-content:flex-start; flex-wrap:wrap; padding:0 5.5rem; font-size:2.2rem; line-height:2.5rem; color:#fff; font-weight:bold; background:linear-gradient(135deg, #98222c, #be417b);box-sizing: border-box;}
-.login-box .head .big{font-size:3.7rem; line-height:4rem;}
+.login-box .head{height:25rem; display:flex; align-items:center; justify-content:flex-start; flex-wrap:wrap; padding:0 5.5rem; font-size:2.6rem;/*font-size:2.2rem;*/ line-height:3rem;/*line-height:2.5rem;*/ color:#fff; font-weight:bold; background:linear-gradient(135deg, #98222c, #cc0041);/*background:linear-gradient(135deg, #98222c, #be417b);*/ box-sizing: border-box;}
+.login-box .head .big{font-size:4rem; line-height:1.8;/*font-size:3.7rem; line-height:4rem;*/}
 .login-box .head div{width:100%; max-width:68rem; margin:0 auto; font-size:inherit; line-height:inherit; box-sizing:border-box;}
 .login-box .con{display:flex; align-items:center; justify-content:center;}
 .login-box .con > .innerWrap{margin-top:2.5rem;}
@@ -408,7 +408,7 @@ footer .copy {max-width:68rem; padding-top: 1.2rem; margin: 1rem auto 0; font-si
 .login-box .con .innerWrap > *{display:block;}
 .login-box .con .innerWrap > button{width:30rem;}
 .login-box .con .innerWrap > button + button{margin-top:1rem;}
-.login-box .con .innerWrap .link-icon-arr{display:flex; align-items:center; width:15rem; margin:10rem auto 0;}
+.login-box .con .innerWrap .link-icon-arr{display:flex; align-items:center; justify-content:space-evenly; width:15rem; margin:10rem auto 0; font-size:1.6rem; color:#333; line-height:1;}
 
 /* step-wrap */
 .step-wrap{padding: 0rem 0 1.7rem;}
@@ -418,7 +418,7 @@ footer .copy {max-width:68rem; padding-top: 1.2rem; margin: 1rem auto 0; font-si
 .step-wrap .step {width: 12rem; display: flex; justify-content: space-between; align-items: center;}
 .step-wrap .step > li {display:flex; align-items:center; justify-content:center; width: 2rem; height: 2rem; font-size: 1.2rem; line-height:1.6rem; color:#fff; text-align: center; border:2px solid #be417b; border-radius: 50%; opacity:0.6; background:#be417b;}
 .step-wrap .step > li.active {background:#be417b; color:#fff;  border:2px solid #be417b; opacity:1;}
-.step-wrap .step > li.active ~ li {background:#fff; color:#be417b; border:2px solid #be417b; opacity:1; background:#fff;}
+.step-wrap .step > li.active ~ li {background:#fff; color:#aaa;/*color:#be417b;*/ border:2px solid #aaa;/*border:2px solid #be417b;*/ opacity:1; background:#fff;}
 
 /* gap */
 .gap.t2{margin:3rem 0 2rem;}

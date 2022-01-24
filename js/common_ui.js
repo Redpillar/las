@@ -417,10 +417,8 @@
 			$lineBoxInput.on('focus',function(){
 				$(this).parents('.input-box-line').addClass("active focus");
 			}).on('blur',function(){
-				console.log(1111)
 				$(this).parents('.input-box-line');
 				setTimeout(()=>{
-					console.log(222)
 					$(this).parents('.input-box-line').removeClass("active focus");
 				})
 			})

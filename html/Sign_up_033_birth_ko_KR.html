@@ -11,7 +11,7 @@
 <body>
 <!-- wrap-->
 <div id="wrap">
-    <!-- header -->
+    <!-- header -->    
     <header id="header">
         <div class="inner-wrap">
             <div class="arr">
@@ -27,16 +27,41 @@
         <div id="contents">
             <!-- 컨텐츠 영역 -->
             <div class="vc-box">
-                <div class="inner-wrap">
-                    <div class="hdt">
-                        <h2 class="h-h2">본인인증</h2>
+                <div class="inner-wrap">  
+                    <div class="step-wrap">
+                        <p class="tit">LG계정 만들기</p>
+                        <ul class="step">
+                            <li>1</li>
+                            <li>2</li>
+                            <li class="active">3</li>
+                            <li>4</li>
+                        </ul>
                     </div>
+                    <div class="sns-txt">
+                        <i class="sns google"></i>
+                        Google 계정 ***으로 <br> 
+                        인증되었습니다
+                    </div>
+                    <!-- <div class="sns-txt">
+                        <i class="sns facebook"></i>
+                        Facebook 계정 ***으로 <br> 
+                        인증되었습니다
+                    </div>
+                    <div class="sns-txt">
+                        <i class="sns naver"></i>
+                        Naver 계정 ***으로 <br> 
+                        인증되었습니다
+                    </div>
+                    <div class="sns-txt">
+                        <i class="sns kakao"></i>
+                        Kakao 계정 ***으로 <br> 
+                        인증되었습니다
+                    </div> -->
                     <p class="top-txt">
-                        이 계정의 본인인증을 위해 아래 정보를  입력하세요
+                        계정에 적용할<br />본인의 이름과 생년월일을 입력해주세요
                     </p>
-                    <p class="phone-num">LoremGipsum@email.com</p>
                     <div class="input-area">
-                        <div class="field"><!-- [D] 클래스 error ]-->
+                        <fieldset class="field"><!-- [D] 클래스 error ]-->
                             <div class="label-switching l3">
                                 <div class="innerWrap">
                                     <div class="tit">이름</div>
@@ -46,7 +71,7 @@
                                 </div>
                             </div>
                             <div class="input">
-                                <input class="" id="name04" type="text"  placeholder="가입자의 본명을 입력하세요." />
+                                <input class="" id="name04" type="text"  placeholder="가입자의 본명을 입력하세요." value="홍길동" />
                                 <div class="btn-wrap">
                                     <button class="sp-icon btnDel" type="button"><span class="blind">삭제</span></button>
                                 </div>
@@ -59,10 +84,10 @@
                                     <!-- // [D] 오류 메세지 -->
                                 </div>
                             </div>
-                        </div>
+                        </fieldset>
                     </div>
                     <div class="input-area">
-                        <div class="field"><!-- [D] 클래스 error ]-->
+                        <fieldset class="field"><!-- [D] 클래스 error ]-->
                             <div class="label-switching">
                                 <div class="innerWrap">
                                     <div class="tit">생년월일</div>
@@ -70,7 +95,7 @@
                                 </div>
                             </div>
                             <div class="input">
-                                <input class="" id="name05" type="text"  placeholder="생년월일 8자리 입력하세요 (ex :20001123)" />
+                                <input class="" id="name05" type="text"  placeholder="생년월일 8자리 입력하세요 (ex :20001123)" value="20200101" />
                                 <div class="btn-wrap">
                                     <button class="sp-icon btnDel" type="button"><span class="blind">삭제</span></button>
                                 </div>
@@ -83,15 +108,12 @@
                                     <!-- // [D] 오류 메세지 -->
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="btn-set mt10">
-                        <button class="btn a">비밀번호 변경</button>
+                        </fieldset>
                     </div>
                 </div>
             </div>
             <div class="btn-set mt20">
-                <button class="button-basic" disabled>비밀번호 재설정</button>
+                <button class="button-basic">다음</button>
             </div>
             <!-- // 컨텐츠 영역 -->
         </div>
@@ -102,10 +124,12 @@
     <footer>
         <ul class="terms">
             <li><a href="javascript:;">공지사항</a></li>
+            <li class="line"></li>
             <li><a href="javascript:;">문의하기</a></li>
+            <li class="line"></li>
             <li><a href="javascript:;">이용약관</a></li>
-            <li><a href="javascript:;">개인정보</a></li>
-            <li><a href="javascript:;">처리방침</a></li>
+            <li class="line"></li>
+            <li><a href="javascript:;">개인정보 처리방침</a></li>
         </ul>
         <p class="copy">Copyright ⓒ 2022 LG Electronics. All Rights Reserved</p>
     </footer>

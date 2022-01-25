@@ -28,7 +28,7 @@
             <!-- 컨텐츠 영역 -->
             <div class="input-area">
                 <!-- 인풋박스 -->
-                <div class="field"><!-- [D] 클래스 error ]-->
+                <fieldset class="field"><!-- [D] 클래스 error ]-->
                     <div class="label-switching only">
                         <div class="innerWrap">
                             <div class="tit">아이디</div>
@@ -36,7 +36,7 @@
                         </div>
                     </div>
                     <div class="input">
-                        <input class="" id="name01" type="text"  placeholder="직장명" />
+                        <input class="" id="name01" type="text"  placeholder="직장명" value="LoremGipsum@email.com" />
                         <div class="btn-wrap">
                             <button class="sp-icon btnDel" type="button"><span class="blind">삭제</span></button>
                         </div>
@@ -49,13 +49,15 @@
                             <!-- // [D] 오류 메세지 -->
                         </div>
                     </div>
-                    <label class="check-box-label fill small">아이디 기억하기
-                        <input type="checkbox">
-                    </label>
-                </div>
+                    <fieldset>
+                        <label class="check-box-label fill small">아이디 기억하기
+                            <input type="checkbox">
+                        </label>
+                    </fieldset>
+                </fieldset>
             </div>
             <div class="input-area">
-                <div class="field"><!-- [D] 클래스 error ]-->
+                <fieldset class="field"><!-- [D] 클래스 error ]-->
                     <div class="label-switching only">
                         <div class="innerWrap">
                             <div class="tit">비밀번호</div>
@@ -63,7 +65,7 @@
                         </div>
                     </div>
                     <div class="input pw">
-                        <input class="" id="name02" type="password"  placeholder="대문자,숫자,기호 포함 8자 이상 입력하세요" />
+                        <input class="" id="name02" type="password"  placeholder="대문자,숫자,기호 포함 8자 이상 입력하세요" value="123456" />
                         <div class="btn-wrap">
                             <button class="sp-icon btnDel" type="button"><span class="blind">삭제</span></button>
                         </div>
@@ -77,10 +79,10 @@
                             <!-- // [D] 오류 메세지 -->
                         </div>
                     </div>
-                </div>
+                </fieldset>
             </div>
             <div class="btn-set mt20">
-                <button class="button-basic" disabled>로그인</button>
+                <button class="button-basic">로그인</button>
             </div>
             <div class="bothSet01">
                 <div class="set-list">
@@ -109,10 +111,12 @@
     <footer>
         <ul class="terms">
             <li><a href="javascript:;">공지사항</a></li>
+            <li class="line"></li>
             <li><a href="javascript:;">문의하기</a></li>
+            <li class="line"></li>
             <li><a href="javascript:;">이용약관</a></li>
-            <li><a href="javascript:;">개인정보</a></li>
-            <li><a href="javascript:;">처리방침</a></li>
+            <li class="line"></li>
+            <li><a href="javascript:;">개인정보 처리방침</a></li>
         </ul>
         <p class="copy">Copyright ⓒ 2022 LG Electronics. All Rights Reserved</p>
     </footer>

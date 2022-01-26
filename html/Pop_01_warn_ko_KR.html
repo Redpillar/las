@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>LAS</title>
+    <link rel="stylesheet" type="text/css" href="../css/swiper.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+</head>
+
+<body>
+<!-- wrap-->
+<div id="wrap">
+
+    <!-- container -->
+    <div id="container">
+        <div id="contents">
+            <!-- 컨텐츠 영역 -->
+            <button class="btn a fill" onclick="javascript:$('.alert-wrap').addClass('active')">ALERT</button>
+            <!-- // 컨텐츠 영역 -->
+        </div>
+        <!-- // contents -->
+    </div>
+    <!-- container -->
+    <!-- alert -->
+    <div class="alert-wrap">
+        <div class="inner-wrap">
+            <button class="button-close" onclick="javascript:$(this).parents('.alert-wrap').removeClass('active');">close</button>
+            <div class="icon">
+                <span></span>
+                <div class="wrap">
+                    <i class="fa fa-exclamation" aria-hidden="true"></i>
+                </div>
+            </div>
+            <h2>PASS인증안내</h2>
+            <div class="txt">
+                PASS앱에서 인증 완료 후 인증해주세요.<br />
+                [오류코드: 0071]
+            </div>
+            <button class='button-alerrt' onclick="javascript:$(this).parents('.alert-wrap').removeClass('active')">확인</button>
+        </div>
+    </div>
+    <!-- // alert -->
+
+
+</div>
+<!-- wrap -->
+<!-- 스크립트 영역 -->
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../js/swiper.min.js"></script>
+<script src="../js/common_ui.js"></script>
+<script>
+    $(function(){
+        setTimeout(()=>{
+            $(".alert-wrap").addClass("active");
+        },500)
+    })
+</script>
+
+</body>
+</html>

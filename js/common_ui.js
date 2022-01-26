@@ -121,16 +121,26 @@
 					label.removeClass("small").removeClass("sm").parent().addClass("small");
 				}
 			})
-
-
-
 			const $checkbox = $label.parent();
 			if(!$checkbox.length) return;
 			$checkbox.click(function(ev){
 				if((ev.target.tagName).toLowerCase() === 'input' || (ev.target.tagName).toLowerCase() === 'a') return;
-				$(this).toggleClass("checked");
-				const check = $(this).hasClass("checked");
-				$(this).find("input").prop("checked",check)
+				const _input = $(this).find("input");
+				const type = _input.attr("type").toLowerCase();
+				if(type === "radio"){
+					const name = _input.attr("name");
+					const $checkbox = $("input[type=radio][name="+name+"]");
+					$checkbox.each(function(){
+						const $box = $(this).parents(".check-box-wrap");
+						$box.removeClass("checked");
+					})
+					$(this).addClass("checked");
+					_input.prop("checked",true)
+				}else{
+					$(this).toggleClass("checked");
+					const check = $(this).hasClass("checked");
+					_input.prop("checked",check)
+				}
 			})
 
 		},

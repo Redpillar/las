@@ -438,7 +438,7 @@ footer .copy {max-width:68rem; padding-top: 1.2rem; margin: 1rem auto 0; font-si
 .gap.t2{margin:3rem 0 2rem;}
 
 /* btn-set */
-.check-box-wrap + .btn-set{margin-top:2rem;}
+.input-box-wrap + .btn-set{margin-top:2rem;}
 
 
 /* top-info-set */
@@ -463,11 +463,11 @@ footer .copy {max-width:68rem; padding-top: 1.2rem; margin: 1rem auto 0; font-si
 /* clause-list-box */
 .clause-list-box > ul > li > .tit{display:flex; justify-content:space-between; align-items:center;}
 .clause-list-box > ul > li > .tit fieldset{width:auto; flex:1;}
-.clause-list-box > ul > li > .tit .check-box-wrap{flex:1;}
+.clause-list-box > ul > li > .tit .input-box-wrap{flex:1;}
 
 /* cb-type-select-box */
 .cb-type-select-box{padding:3rem 0 4rem 0;}
-.cb-type-select-box .check-box-wrap + .check-box-wrap{margin-top:1.5rem;}
+.cb-type-select-box .input-box-wrap + .input-box-wrap{margin-top:1.5rem;}
 
 /* both-txt-footerTop */
 .both-txt-footerTop{font-size:1.2rem; color:#be417b; line-height:1.8rem;}

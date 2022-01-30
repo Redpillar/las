@@ -71,7 +71,7 @@
                                 </div>
                             </div>
                             <div class="input">
-                                <input class="" id="name04" type="text"  placeholder="가입자의 본명을 입력하세요." value="홍길동" />
+                                <input class="" id="name" type="text"  placeholder="가입자의 본명을 입력하세요." value="홍길동" />
                                 <div class="btn-wrap">
                                     <button class="sp-icon btnDel" type="button"><span class="blind">삭제</span></button>
                                 </div>
@@ -95,7 +95,7 @@
                                 </div>
                             </div>
                             <div class="input">
-                                <input class="" id="name05" type="text"  placeholder="생년월일 8자리 입력하세요 (ex :20001123)" value="20200101" />
+                                <input class="" id="birthday" type="text" placeholder="생년월일 8자리 입력하세요 (ex :20001123)" value="20200101" />
                                 <div class="btn-wrap">
                                     <button class="sp-icon btnDel" type="button"><span class="blind">삭제</span></button>
                                 </div>
@@ -140,6 +140,11 @@
 <script src="../js/jquery-3.4.1.min.js"></script>
 <script src="../js/swiper.min.js"></script>
 <script src="../js/common_ui.js"></script>
+<script>
+    $(function(){
+        $("#birthday").focus();
+    })
+</script>
 <!-- 스크립트 영역 -->
 
 </body>

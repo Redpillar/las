@@ -46,7 +46,7 @@
                                 </div>
                             </div>
                             <div class="input pw">
-                                <input class="" id="name02" type="password" placeholder="대문자,숫자,기호 포함 8자 이상 입력하세요" value="123457">
+                                <input class="" id="password" type="password" placeholder="대문자,숫자,기호 포함 8자 이상 입력하세요" value="123457">
                                 <div class="btn-wrap">
                                     <button class="sp-icon btnDel" type="button"><span class="blind">삭제</span></button>
                                 </div>
@@ -100,6 +100,11 @@
 <script src="../js/jquery-3.4.1.min.js"></script>
 <script src="../js/swiper.min.js"></script>
 <script src="../js/common_ui.js"></script>
+<script>
+    $(function(){
+        $("#password").focus();
+    })
+</script>
 <!-- 스크립트 영역 -->
 
 </body>

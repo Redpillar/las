@@ -19,6 +19,10 @@
         .btn-set + .btn-set{margin-top:2.2rem;}
 
         .btn-ac{margin:0 0 0 0.5rem; border:1px solid #999; border-radius:0.5rem; padding:0.3rem 0.8rem; font-size:1.2rem; font-weight:bold;}
+
+        .step-wrap{padding-bottom:0;}
+
+        .circle_i{position:relative; top:-0.2rem; margin-left:0.5rem;}
     </style>
 </head>
 
@@ -45,7 +49,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <th rowspan="4">1레벨 버튼</th>
+                    <th rowspan="3">1레벨 버튼</th>
                     <th>CTA</th>
                     <td><button class="button-basic">Button</button></td>
                     <td><button class="button-basic" readonly>Button</button></td>
@@ -62,12 +66,6 @@
                     <td><button class="button-basic outline gray">Button</button></td>
                     <td><button class="button-basic outline gray" readonly>Button</button></td>
                     <td><button class="button-basic outline gray" disabled>Button</button></td>
-                </tr>
-                <tr>
-                    <th>Gray</th>
-                    <td><button class="button-basic g">Button</button></td>
-                    <td><button class="button-basic g" readonly>Button</button></td>
-                    <td><button class="button-basic g" disabled>Button</button></td>
                 </tr>
                 <tr class="l2">
                     <th rowspan="3">2레벨 버튼</th>
@@ -334,6 +332,43 @@
                             <div class="btn-wrap">
                                 <button class="sp-icon btnDel" type="button"><span class="blind">삭제</span></button>
                             </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="l2">
+                    <th class="tit">구분</th>
+                    <th class="tit">항목</th>
+                    <th class="tit" colspan="3">Step</th>
+                </tr>
+                <tr>
+                    <th>Step</th>
+                    <td>중요<i class="circle_i bg-important"></i></td>
+                    <td colspan="3" style="text-align:left;">
+                        <span class="txt-important">*중요한 내용이므로 주의깊게 읽어주세요.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Step</th>
+                    <td>조건충족<i class="circle_i bg-terms"></i></td>
+                    <td colspan="3" style="text-align:left;">
+                        <span class="txt-terms">문자</span>,<span class="txt-terms">숫자</span>,<span class="txt-terms">기호 포함</span> 8자 이상 입력하세요.
+                    </td>
+                </tr>
+                <tr class="l2">
+                    <th class="tit">구분</th>
+                    <th class="tit" colspan="4">Step</th>
+                </tr>
+                <tr>
+                    <th>Step</th>
+                    <td colspan="4">
+                        <div class="step-wrap">
+                            <p class="tit">LG계정 만들기</p>
+                            <ul class="step">
+                                <li>1</li>
+                                <li>2</li>
+                                <li class="active">3</li>
+                                <li>4</li>
+                            </ul>
                         </div>
                     </td>
                 </tr>

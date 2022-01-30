@@ -10,6 +10,7 @@
         *{margin:0;padding:0; border:none; text-decoration:none; font-size:14px;}
         /* a {font-size:13px; color:red} */
         h1 {font-size:20px}
+        .top{border-top:3px solid #ddd;}
         .work-wrap {display:inline-block; margin:10px;}
         .total-area:before {display:inline-block; content:""; width:3px; height:13px; background:rgb(7, 168, 160); vertical-align: middle;}
         .total-area {font-size:14px; padding-bottom:10px; border-bottom:2px solid rgb(7, 168, 160); margin-bottom:10px;}
@@ -46,10 +47,20 @@
                 complete = 0,
                 complete2 = 0,
                 matching = ""; // 작업자 목록 담기 
+            let checkDepth = null, etcCount = 0;
             
             var totalArea = $('.total-area');
             tr_ea.each(function(i){
-                $(this).children().first().text(i + 1); // TR갯수 만큼 첫번째 TD 에 숫자 넣어주기 
+                const _depth1 = $(this).children().eq(1);
+                const depthName = _depth1.text();
+                let txt = i + 1;
+                if(depthName !== "") checkDepth = depthName;
+                if(checkDepth === "공통" || checkDepth === "목업"){
+                    etcCount+=1;
+                }else{
+                    txt -= etcCount
+                }
+                $(this).children().first().text(txt); // TR갯수 만큼 첫번째 TD 에 숫자 넣어주기 
                 $(this).children().first().css({
                     'text-align' : 'center'
                 })
@@ -317,7 +328,7 @@
                 
                     <!-- 목업 -->
                     <!-- 00- 계정ID 유형선택 -->
-                    <tr>
+                    <tr class="top">
                         <td></td>
                         <td>Sign Up</td>
                         <td>00- 계정ID 유형선택</td>

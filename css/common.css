@@ -377,10 +377,10 @@ footer .copy {max-width:68rem; padding-top: 1.2rem; margin: 1rem auto 0; font-si
 .sns-list ul > li a {display:flex;font-size: 1.3rem; line-height:1.5rem; padding: 1rem;flex: 1;width: 100%;}
 
 .sns {display:block;width:2.4rem;height:2.4rem;background: url(../images/sns_logo03.png);background-size: 100% auto;overflow: hidden;border-radius: 50%;}
-.sns.facebook {background:#475993 url(../images/sns_logo01.png); background-size: 100% auto; background-position: -2px 0}
-.sns.google   {background: url(../images/sns_logo03.png); background-size: 100% auto;}
-.sns.naver    {background: url(../images/sns_logo02.png); background-size: 100% auto;}
-.sns.kakao    {background: url(../images/sns_logo04.png); background-size: 100% auto;}
+.sns.facebook, .sns.f {background:#475993 url(../images/sns_logo01.png); background-size: 100% auto; background-position: -2px 0}
+.sns.google, .sns.g   {background: url(../images/sns_logo03.png); background-size: 100% auto;}
+.sns.naver, .sns.n    {background: url(../images/sns_logo02.png); background-size: 100% auto;}
+.sns.kakao, .sns.k    {background: url(../images/sns_logo04.png); background-size: 100% auto;}
 
 .sns-txt {font-size: 1.4rem; line-height:1.8rem; color: #111; text-align: center;}
 .sns-txt .sns {width: 4.5rem; height: 4.5rem; }
@@ -398,7 +398,13 @@ footer .copy {max-width:68rem; padding-top: 1.2rem; margin: 1rem auto 0; font-si
 /* font color */
 .fontColor1{color:#98222e}
 .fontColor2{color:#4ead5b}
+.txt-important{color:#98222e !important;}
+.txt-terms{color:#4ead5b !important;}
+.bg-important{background-color:#98222e !important;}
+.bg-terms{background-color:#4ead5b !important;}
 
+/* icon circle */
+.circle_i{display:inline-block; width:1.2rem; height:1.2rem; vertical-align:middle;  border-radius:100%;}
 
 /* a link */
 .link-icon-arr{display:flex; justify-content:space-between; font-size:1.6rem; font-weight:bold; color:#333; line-height:2.2rem;}
@@ -443,7 +449,7 @@ footer .copy {max-width:68rem; padding-top: 1.2rem; margin: 1rem auto 0; font-si
 
 /* top-info-set */
 .top-info-set .top-icon{text-align:center;}
-.top-info-set .top-icon span{display:inline-block; width:5rem; height:5rem; border-radius:1rem; border:0.1rem solid #be417b; background:linear-gradient(135deg, #98222c, #be417b);}
+.top-info-set .top-icon span{ width:3.5rem; height:3.5rem; margin:0 auto 0 auto; /*display:inline-block; width:5rem; height:5rem; border-radius:1rem; border:0.1rem solid #be417b; background:linear-gradient(135deg, #98222c, #be417b);*/}
 .top-info-set h1{margin:1rem 0 0; font-size:2rem; font-weight:bold; text-align:center;}
 .top-info-set h1.t2{width:80%; margin-left:auto; margin-right:auto;}
 .top-info-set .link{display:block; margin:0.5rem 0 0 0; text-align:center;}
@@ -483,8 +489,11 @@ footer .copy {max-width:68rem; padding-top: 1.2rem; margin: 1rem auto 0; font-si
 /* top-txt */
 #contents .top-txt:first-child {padding-top:1rem; padding-bottom:1rem;}
 .top-txt {font-size: 1.5rem; line-height:1.8rem; }
+.top-txt.both-line, #contents .top-txt.both-line:first-child {padding-bottom:3rem; border-bottom:1px solid #ddd;}
 .top-txt b {display:block; padding:0.5rem 0 0 0; font-size: 2.5rem; line-height:2.5rem;}
+.top-txt b.subTit {font-size:1.5rem; line-height:1.8rem;}
 .hdt + .top-txt{margin-top:5rem;}
+
 
 /* .field */
 .field-both-txt{padding:0; font-size:1.2rem; line-height:1.4rem; color:#777;}
@@ -770,6 +779,8 @@ footer .copy {max-width:68rem; padding-top: 1.2rem; margin: 1rem auto 0; font-si
 .set-list.b ul > li {border-bottom: 1px solid #ddd; }
 .set-list.b ul > li .tit .data {font-size:1.2rem; line-height:1.4rem; color:#888}
 .set-list.b ul > li > a {padding-bottom: 1rem;  padding-top: .5rem; color:#111}
+.top-txt + .set-list.b{margin-top:2.5rem;}
+
 
 .bothSet01 .set-list{margin:3rem 0 2rem;}
 .bothSet01 .sns-list{margin:2rem 0 0rem;}
@@ -872,6 +883,21 @@ footer .copy {max-width:68rem; padding-top: 1.2rem; margin: 1rem auto 0; font-si
         transform:scale(1);
         opacity:1;
     }
+}
+
+/* dummuy */
+.dummy-img-war{
+    text-align:center;
+    background:#fafafa;
+}
+.dummy-img-war div:first-child{
+    background:#fff;
+}
+.dummy-img-war img{
+    width:100%;
+    max-width:68rem;
+    min-width:32rem;
+    height:auto;
 }
 
 /* 저해상도 대응 */

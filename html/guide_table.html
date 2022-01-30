@@ -23,6 +23,8 @@
         .step-wrap{padding-bottom:0;}
 
         .circle_i{position:relative; top:-0.2rem; margin-left:0.5rem;}
+
+        .input-area .field{padding-top:0; min-height:auto; margin:2rem 0;}
     </style>
 </head>
 
@@ -37,12 +39,14 @@
                 <col style="width:auto;" />
                 <col style="width:auto;" />
                 <col style="width:auto;" />
+                <col style="width:auto;" />
             </colgroup>
             <thead>
                 <tr>
                     <th>구분</th>
                     <th>항목</th>
                     <th>Normal</th>
+                    <th>Hover</th>
                     <th>ReadOnly</th>
                     <th>Disabled</th>
                 </tr>
@@ -52,17 +56,20 @@
                     <th rowspan="3">1레벨 버튼</th>
                     <th>CTA</th>
                     <td><button class="button-basic">Button</button></td>
+                    <td><button class="button-basic">Button</button></td>
                     <td><button class="button-basic" readonly>Button</button></td>
                     <td><button class="button-basic" disabled>Button</button></td>
                 </tr>
                 <tr>
                     <th>Primary</th>
                     <td><button class="button-basic outline">Button</button></td>
+                    <td><button class="button-basic outline">Button</button></td>
                     <td><button class="button-basic outline" readonly>Button</button></td>
                     <td><button class="button-basic outline" disabled>Button</button></td>
                 </tr>
                 <tr>
                     <th>Secondary</th>
+                    <td><button class="button-basic outline gray">Button</button></td>
                     <td><button class="button-basic outline gray">Button</button></td>
                     <td><button class="button-basic outline gray" readonly>Button</button></td>
                     <td><button class="button-basic outline gray" disabled>Button</button></td>
@@ -71,11 +78,13 @@
                     <th rowspan="3">2레벨 버튼</th>
                     <th>CTA</th>
                     <td><button class="button-basic small">Button</button></td>
+                    <td><button class="button-basic small">Button</button></td>
                     <td><button class="button-basic small" readonly>Button</button></td>
                     <td><button class="button-basic small" disabled>Button</button></td>
                 </tr>
                 <tr>
                     <th>Primary</th>
+                    <td><button class="button-basic outline small">Button</button></td>
                     <td><button class="button-basic outline small">Button</button></td>
                     <td><button class="button-basic outline small" readonly>Button</button></td>
                     <td><button class="button-basic outline small" disabled>Button</button></td>
@@ -83,10 +92,22 @@
                 <tr>
                     <th>Secondary</th>
                     <td><button class="button-basic outline gray small">Button</button></td>
+                    <td><button class="button-basic outline gray small">Button</button></td>
                     <td><button class="button-basic outline gray small" readonly>Button</button></td>
                     <td><button class="button-basic outline gray small" disabled>Button</button></td>
                 </tr>
-                <tr class="l2">
+            </tbody>
+        </table>
+
+        <table class="guide-table">
+            <colgroup>
+                <col style="width:5rem;" />
+                <col style="width:8rem;" />
+                <col style="width:auto;" />
+                <col style="width:auto;" />
+                <col style="width:auto;" />
+            </colgroup>
+                <tr>
                     <th class="tit">구분</th>
                     <th class="tit">항목</th>
                     <th class="tit" colspan="2">버튼 1</th>
@@ -338,17 +359,16 @@
                 <tr class="l2">
                     <th class="tit">구분</th>
                     <th class="tit">항목</th>
-                    <th class="tit" colspan="3">Step</th>
+                    <th class="tit" colspan="3">Text</th>
                 </tr>
                 <tr>
-                    <th>Step</th>
+                    <th rowspan="2">Text</th>
                     <td>중요<i class="circle_i bg-important"></i></td>
                     <td colspan="3" style="text-align:left;">
                         <span class="txt-important">*중요한 내용이므로 주의깊게 읽어주세요.</span>
                     </td>
                 </tr>
                 <tr>
-                    <th>Step</th>
                     <td>조건충족<i class="circle_i bg-terms"></i></td>
                     <td colspan="3" style="text-align:left;">
                         <span class="txt-terms">문자</span>,<span class="txt-terms">숫자</span>,<span class="txt-terms">기호 포함</span> 8자 이상 입력하세요.

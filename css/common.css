@@ -1030,8 +1030,8 @@ footer .copy {max-width:68rem; padding-top: 1.2rem; margin: 1rem auto 0; font-si
 .icon-box{display:flex; align-items:center; justify-content:center; padding:10rem 0; color:#a82956;}
 .icon-box > .inner-wrap{display:flex; flex-direction:column; justify-content:center; align-items:center;}
 .icon-box > .inner-wrap > .icon{display:flex; align-items:center; justify-content:center; width:5rem; height:5rem; font-size:3.5rem; border:0.3rem solid #a82956; border-radius:100%;}
-.icon-box > .inner-wrap > p{padding:0 0 0 1.5rem; font-size:1.6rem; font-weight:bold; line-height:2rem; text-align:center;}
-.icon-box > .inner-wrap > .icon + p{padding-top:2rem;}
+.icon-box > .inner-wrap > p{padding:0 0 0 1.5rem; font-size:1.6rem; font-weight:bold; line-height:2rem; text-align:center; color:#333;}
+.icon-box > .inner-wrap > .icon + p{padding:2rem 0 0 0;}
 
 /* loading */
 .modal-loading{position:fixed; top:0; left:0; right:0; bottom:0; z-index:10000; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.25);}

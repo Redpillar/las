@@ -69,9 +69,9 @@ input[type="text"]:-ms-input-placeholder {/* Internet Explorer 10+ */color:#999;
 
 .button-basic[readonly]{cursor:default; color:#333; border-color:#eee; background:#eee;}
 .button-basic[disabled]{cursor:default; color:#333; border-color:#eee; background:#eee;}
-.button-basic.outline[disabled]{color:#333; border-color:#eee; background:transparent;}
+.button-basic.outline[disabled]{color:#333; border-color:#eee; background:#eee;}
 .button-basic.outline[readonly]{color:#333; border-color:#eee; background:transparent;}
-.button-basic.outline.gray[disabled]{color:#333; border-color:#eee; background:transparent;}
+.button-basic.outline.gray[disabled]{color:#333; border-color:#eee; background:#eee;}
 .button-basic.outline.gray[readonly]{color:#333; border-color:#eee; background:transparent;}
 .button-basic.g[disabled]{color:#333; border-color:#ddd; background:#ddd;}
 .button-basic.g[readonly]{color:#333; border-color:#ddd; background:#ddd;}
